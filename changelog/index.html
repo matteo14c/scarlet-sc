@@ -1,0 +1,1527 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cell-type annotation for single-cell RNA-seq data">
+      
+      
+      
+      
+        <link rel="prev" href="../glossary/">
+      
+      
+        <link rel="next" href="../reference/cli/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../logo/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Changelog - SCARLET</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SCARLET" class="md-header__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCARLET
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SCARLET" class="md-nav__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    SCARLET
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading the output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#063-2026-11-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.6.3 (2026-11-27)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.6.3 (2026-11-27)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-the-beta-testers-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From the beta testers' feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-10-draws-the-consensus-quick-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transfer: 10 draws, the consensus, quick mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-only-the-presets-and-the-flip-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detection only, the presets and the flip test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-commands-and-their-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The commands and their options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-blocklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The blocklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-run-says-and-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a run says and records
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#062" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.6.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earlier-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Earlier versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#063-2026-11-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.6.3 (2026-11-27)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0.6.3 (2026-11-27)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-the-beta-testers-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From the beta testers' feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-10-draws-the-consensus-quick-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transfer: 10 draws, the consensus, quick mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-only-the-presets-and-the-flip-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detection only, the presets and the flip test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-commands-and-their-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The commands and their options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-blocklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The blocklist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-run-says-and-records" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a run says and records
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#062" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.6.2
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earlier-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Earlier versions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<p>User-visible changes of SCARLET. The public package holds the commands <code>learn</code>, <code>assign</code>, <code>transfer</code> and <code>report</code>.
+The documentation is in <code>docs/</code>.</p>
+<h2 id="063-2026-11-27">0.6.3 (2026-11-27)<a class="headerlink" href="#063-2026-11-27" title="Permanent link">&para;</a></h2>
+<p>0.6.3 makes the public package exactly the four documented commands, with plain options, and makes every run say
+what it did.</p>
+<ul>
+<li>
+<p><strong>Python 3.11 to 3.13</strong> (Python 3.10 is no longer supported). With Python 3.12 or later SCARLET requires scanpy
+  1.12.6 or later; with Python 3.11, umap-learn below 0.6 and pynndescent below 0.7 (scanpy up to 1.11 does not work
+  with their newer releases in the report's UMAP).</p>
+</li>
+<li>
+<p><strong>Dependency floors</strong> are the oldest versions the tests ran with: anndata 0.12.14, scanpy 1.11.5, numpy 2.4.4,
+  pandas 2.3.3, scipy 1.17.1, scikit-learn 1.8.0.</p>
+</li>
+</ul>
+<h3 id="from-the-beta-testers-feedback">From the beta testers' feedback<a class="headerlink" href="#from-the-beta-testers-feedback" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The benchmark is its own section of the repository</strong> (<code>benchmark/</code>, linked from the README and the documentation),
+  no longer part of the documentation site.</li>
+<li><strong>Reports that never stop a run.</strong> With <code>--report yes</code>, <code>learn</code> and <code>transfer</code> keep their outputs and end normally
+  when the report cannot be written (plotly missing, or an error in the report): a warning says so. The learn report's
+  self-assessment reads the genes from the model's gene column (<code>--gene-col</code>), as learn did; repeated gene names no
+  longer stop a report.</li>
+<li>
+<p><strong>A fixed order among tied marker genes.</strong> When genes tie exactly at the marker search's cut-off, the more
+  specific gene (the lower score in every other cell type) is taken first, then the gene name; before, the choice
+  depended on the CPU (numpy's vector code). Calls change in a few cells; the benchmark numbers are recomputed.</p>
+</li>
+<li>
+<p><strong>Less output.</strong> <code>verbosity</code> (<code>--verbosity</code>) on every command: <code>normal</code> (the default) prints the pre-flight once,
+  one progress bar, one line per draw or fold and the result; <code>quiet</code> prints nothing; <code>full</code> prints every step, as
+  before. It changes no result and is not recorded as a setting.</p>
+</li>
+<li><strong>Example data from the package.</strong> <code>scarlet.datasets.fetch</code> (and <code>python -m scarlet.datasets</code>) downloads the
+  tutorials' data and checks their SHA-256; while the repository is private it falls back to the GitHub CLI. The data
+  are now the inputs of SCARLET's benchmark, with the benchmark's own selection of cells. Each file shows its progress
+  while it downloads.</li>
+<li><strong>Install extras.</strong> <code>report</code> (the HTML reports), <code>tutorials</code> (the reports, JupyterLab and the widgets the notebooks
+  need) and <code>docs</code> (the pinned packages to build the documentation locally).</li>
+<li><strong>A clear error for scripts.</strong> <code>transfer</code> with <code>ncpu</code> above 1, called from a Python script without
+  <code>if __name__ == "__main__":</code>, stops with one line saying so instead of a broken process pool, and the script exits
+  with an error; also when the script calls <code>learn</code> or <code>assign</code> first (before, the script could then wait forever).</li>
+<li><strong>Input checksums.</strong> <code>learn</code> records the SHA-256 of its reference file in the model, <code>transfer</code> of both its inputs
+  in <code>transfer_record.json</code>; the reports show them and check them against the files they read.</li>
+<li><strong>Reports.</strong> Each page opens on a summary of the result and ends with the provenance. The UMAPs have their own
+  switches (output, view, highlight) and are computed by default on the model's own genes, with all genes as a second
+  space (<code>umap_all_genes</code>). <code>query_labels</code> (<code>--query-labels</code>) compares the calls of a transfer or an assign with
+  labels you know, in a section marked as yours. Readable table headers and numbers; per-cell tables with a filter
+  (the cells worth a look first) and sortable columns; agreement histograms; the depth before and after matching;
+  the drill-down heatmaps in one gene order; the transfer named by its datasets; folds numbered 1 to 5; certainty
+  relative to the run; without WebGL, the UMAPs are drawn as SVG. In the transfer report: the drill-down in three
+  parts (markers common to both models, only in A's, only in B's) with each model's own estimate for every one of
+  them, read from the models' in-class tables, and each marker's rank in both models; <em>what refinement changed</em> on a
+  page of its own (<code>refinement.html</code>); the per-cell data counted first, the table folded and shown 25 rows at a time.
+  In the transfer and assign reports, the bar chart of the calls has no numbers above the bars (in the hover instead).</li>
+<li><strong>The model keeps learn's in-class table</strong> (<code>in_class.tsv</code>): for every gene the marker search scored, each cell
+  type's share of cells detecting it, the same bootstrap estimate the universe holds for the markers. The transfer
+  report reads it. A mouse-brain model grows from about 0.5 to 5 MB, a PBMC model from 0.2 to 0.9 MB; calls do not
+  change. Earlier versions of SCARLET read such models (they ignore the new member).</li>
+<li><strong>Tutorials.</strong> The notebooks' cells carry ids (nbformat 4.5); the tutorials page says what notebook 03's memory
+  numbers measure and on how many CPUs, and its time on a laptop. The data download's progress line ends at 100 %
+  also through the GitHub CLI.</li>
+<li><strong>Troubleshooting</strong> lists the messages in tables: message, cause, fix.</li>
+<li><strong>Documentation.</strong> New pages: tutorials, the blocklist, the reports (one per kind), the benchmarks figure by figure
+  (with run time and memory, and every input's SHA-256), known limitations.</li>
+</ul>
+<h3 id="transfer-10-draws-the-consensus-quick-mode">Transfer: 10 draws, the consensus, quick mode<a class="headerlink" href="#transfer-10-draws-the-consensus-quick-mode" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Draws.</strong> A transfer repeats depth matching, the first pass and the refinement in 10 draws by default (<code>--draws</code>),
+  each with its own seed (<code>--seeds</code>, by default 1 up to the number of draws) for depth matching and the marker
+  search. Each cell's best and unique calls are the outcome most draws give ("unassigned" counts as one) when at
+  least 8 of the 10 draws give it, otherwise <code>unassigned</code> with the reason "undetermined across draws". This is a
+  fixed rule (by chance alone, 8 or more of 10 agree with one-sided p 0.055); for another number of draws a call
+  needs 80 % of them, rounded up. The same inputs, options and seeds give the same output, byte for byte, whatever
+  <code>--ncpu</code>.</li>
+<li><strong>Quick mode.</strong> <code>--draws 1</code> runs the same method once: the draw's own calls, no consensus and no per-cell
+  agreement; a fifth to a quarter of the time with one CPU (measured).</li>
+<li><strong>CPUs.</strong> With <code>--ncpu k</code> the draws run side by side, up to k at a time, sharing the input data: faster, with
+  more memory (measured on two benchmark tasks with 5 CPUs: 3.1–3.2 times faster, 3.3–4.1 times the memory). The
+  default is 1. Choose a
+  number that divides the number of draws (with 10 draws: 1, 2, 5 or 10); values between 5 and 10 bring no further
+  speed-up. The transfer guide gives the measured run time and peak memory per mode and CPU count, and how to
+  choose <code>--ncpu</code> by the available memory: a deep dataset of mouse-brain size needs about 3 GB with one CPU. The
+  marker search adds its bootstrap results in the same order whatever <code>--ncpu</code>, so the result does not depend on
+  it, bit for bit.</li>
+<li><strong>Memory.</strong> The same outputs, byte for byte, with less memory: input counts stored as 64-bit integers are held as
+  32-bit integers when every value fits; the per-cell summaries read the data in bounded chunks; detection patterns
+  share one read-only array of their (all true) values; learn keeps only the detection of an input it read; nothing
+  of a finished step is kept for the next. Measured with one CPU (through the Python API, without the blocklist): a
+  deep mouse-brain transfer 4.7 → 3.0 GB, a learn on 44,000 cells 1.7 → 1.0 GB, the brain transfer's report
+  6.2 → 3.6 GB (its UMAP works in 32-bit floats, as scanpy does, and its self-assessment on the detection pattern).
+  Each marker search frees its data when it ends: with the default blocklist its data were kept until Python's
+  garbage collector ran, so a transfer's twenty or so marker searches piled them up (the deep mouse-brain transfer
+  as a user runs it, one CPU: 5.8 → 3.1 GB).</li>
+<li><strong>Stable anchors.</strong> The refinement learns each cell type from its stable anchors: the cells the first pass called
+  uniquely to that cell type in every draw of the run. A cell type is refined with at least 3 stable anchors; an
+  origin needs at least 2 refined cell types. Every stable anchor keeps its anchor label.</li>
+<li><strong>The refinement's background</strong> is the detection rate of each gene over all the origin's query cells.</li>
+<li><strong>Options:</strong> <code>draws</code> and <code>seeds</code> (advanced) replace transfer's <code>seed</code>. <code>learn</code> and <code>assign</code> keep <code>seed</code> and run
+  once.</li>
+<li><strong>Outputs:</strong> <code>first_pass.tsv</code> and <code>labels.tsv</code> hold the consensus calls, with each call's agreement (how many
+  draws gave the most frequent outcome; not in quick mode) and, for a refused cell, its reason (<code>background</code>,
+  <code>ambiguity</code>, <code>undetermined across draws</code>, <code>flip test</code>); <code>scarlet_top1</code> and <code>scarlet_runner_up</code> with
+  <code>scarlet_runner_up_draws</code>; <code>scarlet_stable_anchor</code> (a flag, in both files); in <code>labels.tsv</code> the refine note "not
+  refined: not anchored stably" or "origin not refined: fewer than 2 cell types anchored stably". The flip and
+  positive-evidence flags are set when raised in at least half the draws, with the draw counts. The models saved are
+  the first draw's. The record (<code>transfer_record.json</code>, schema 4) holds the draws, their seeds, the mode, the
+  consensus rule, depth matching per draw, the stable anchors and the backgrounds, and each draw's result.</li>
+</ul>
+<h3 id="detection-only-the-presets-and-the-flip-test">Detection only, the presets and the flip test<a class="headerlink" href="#detection-only-the-presets-and-the-flip-test" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>No binarisation.</strong> Both technology presets read a gene as detected when its count is above 0, in learn, assign
+  and transfer. The dense preset no longer reduces each cell to a target number of detected genes; it differs from
+  the sparse preset only in the marker search's background penalty (0 dense, 6 sparse). The model's settings record
+  (schema 3) names the detection rule.</li>
+<li><strong>The flip test</strong> refuses a flipped call in <code>assign</code> with every model (<code>--flip refuse</code>, the default; <code>--flip
+  flag</code> keeps it); <code>auto</code> is removed. <code>transfer</code> flags flipped calls by default (<code>--flip refuse</code> is available); its
+  refinement does not apply the test.</li>
+</ul>
+<h3 id="the-report">The report<a class="headerlink" href="#the-report" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Transfer report</strong>: the query UMAP has two switches, the output and the view (label; certainty: intensity =
+  agreement k of N, full colour in quick mode; stable anchors outlined; unlabelled cells by reason); hover shows the
+  call, agreement, runner-up, reason and anchor flag. Boundary maps (best call × runner-up, first pass and refined),
+  a per-identity table (calls, stable anchors, refined or not and why, % full agreement, % boundary, % unlabelled by
+  reason) and a per-cell table downloadable from the page.</li>
+<li><strong>Learn report</strong>: the same certainty and boundary views on the reference, from the self-assessment (FDR, margin,
+  runner-up), and a downloadable per-cell table.</li>
+<li><strong>All reports</strong>: a colour-blind-safe palette (Okabe-Ito, Paul Tol's muted and light) for up to 24 cell types.</li>
+<li><strong>Fixes</strong>: <code>transfer(report=True)</code> with AnnData inputs writes its report; <code>report=True</code> and <code>report</code> check for
+  plotly (the <code>report</code> extra) before any work.</li>
+<li><strong>Removed:</strong> the root files <code>API.md</code> and <code>DEFAULTS.md</code>, left from earlier versions; the documentation in <code>docs/</code>
+  covers what they described of the four commands.</li>
+</ul>
+<h3 id="the-commands-and-their-options">The commands and their options<a class="headerlink" href="#the-commands-and-their-options" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Four commands.</strong> The package holds <code>learn</code>, <code>assign</code>, <code>transfer</code> and <code>report</code>, plus <code>scarlet.load_model</code> and
+  <code>Model</code>. The experimental commands are removed from the public package; tools to merge, split and discover cell
+  identities will be added in later releases. With them go two dependencies used only for clustering,
+  python-igraph and leidenalg, which are no longer installed.</li>
+<li><strong>Fewer options.</strong> Every option that existed only for development is removed, with no alias: the profile option
+  and the earlier-behaviour profile; from <code>learn</code> and <code>transfer</code> the explicit blocklist categories, the external
+  universe, the bootstrap order, active-gene normalisation and its targets, the minimum genes per cell, the marker
+  filter's settings, the classifier background mode, the universe mode and temper, the marker score's beta, gamma
+  and eps, the positive-evidence switch and the raw marker-search arguments; from <code>assign</code> <code>eps</code>,
+  <code>save_probs_to_obs</code>, <code>scoring</code> and <code>positive_evidence</code>; from <code>transfer</code> <code>depth_match_seed</code>, <code>eps</code> and <code>scoring</code>;
+  from <code>report</code> <code>folds</code>. The method uses, fixed, the values every default run used.</li>
+<li><strong><code>marker_shortlist</code> replaces <code>n_background</code></strong> (command line <code>--marker-shortlist</code>): the shortlist size used to
+  rank markers. Same default (the technology preset's, 150), same behaviour.</li>
+<li><strong>Technology preset:</strong> <code>auto</code> (the default), <code>sparse</code> or <code>dense</code>. The former names are not accepted.</li>
+<li><strong><code>transfer</code>:</strong> <code>refine</code> and <code>depth_match</code> take yes / no (<code>True</code> / <code>False</code>): <code>refine yes</code> is the refinement where
+  anchored, <code>depth_match yes</code> the depth matching by capture, as in 0.6.2's defaults; the alternative refinement and
+  depth-matching methods are removed. <code>flip</code> takes <code>flag</code> (the default) or <code>refuse</code>.</li>
+<li><strong><code>assign</code>:</strong> <code>flip</code> takes <code>refuse</code> (the default) or <code>flag</code>.</li>
+<li><strong>Advanced options.</strong> <code>n_markers</code>, <code>marker_shortlist</code>, <code>n_iterations</code>, <code>n_cells</code>, <code>blocklist_modules</code> and <code>alpha</code>
+  keep their defaults and are documented as advanced options (the documentation's "Advanced options" page): the published benchmarks hold at
+  their defaults only.</li>
+</ul>
+<h3 id="the-blocklist">The blocklist<a class="headerlink" href="#the-blocklist" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>blocklist</code>: <code>auto</code> (the default), <code>human</code>, <code>mouse</code>, <code>none</code> or a file.</strong> <code>auto</code> chooses the bundled human or
+  mouse list from the gene names, says how in the pre-flight, the summary and the report, and stops with an error
+  when it cannot tell the species. In 0.6.2 the default was the human list for all data.</li>
+<li>On human data the calls at the defaults are the same as 0.6.2's (checked cell for cell on the benchmark's
+  datasets). On mouse data they can differ, since the mouse list is now applied.</li>
+<li><strong>A blocklist path that does not exist is an error</strong> (in 0.6.2: a warning, and no blocklist).</li>
+<li>The earlier lists that were shipped next to the current ones are no longer in the package. A list's version is
+  recorded only in the run's provenance.</li>
+</ul>
+<h3 id="what-a-run-says-and-records">What a run says and records<a class="headerlink" href="#what-a-run-says-and-records" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Run summary.</strong> Every run writes a few lines in plain words: what it did, on which data, the technology preset
+  and blocklist and why, the marker sizes, the class-size handling, the options not at their defaults, the outputs
+  and the versions. <code>learn</code>: <code>&lt;model stem&gt;.summary.txt</code> next to the model and the model member <code>summary.txt</code>;
+  <code>assign</code>: <code>&lt;output stem&gt;.summary.txt</code> and <code>uns['scarlet_summary']</code>; <code>transfer</code>: <code>summary.txt</code> in the output folder
+  and in <code>transfer_record.json</code>. The report shows it under "What this run did".</li>
+<li><strong>Options not at their defaults.</strong> Every run records them (model <code>settings.json</code>, the annotated file's
+  <code>uns['scarlet_options']</code>, <code>transfer_record.json</code>); the summary and the report state them, and the report adds,
+  for an advanced option, that the published benchmarks used the defaults.</li>
+<li><strong>Cell-cycle genes.</strong> The summary and the report state whether the cell-cycle genes were blocked and, if not, which
+  labels kept them usable; <code>transfer_record.json</code> records the decision of each learn of a transfer.</li>
+<li><strong>What each learn read.</strong> A learn takes its cells in memory (no temporary file). The model's
+  <code>marker_finder_params.json</code> records its input: the reference file (<code>learn</code>), <code>in-memory AnnData</code> and its shape
+  (<code>learn</code> from Python), or, for each learn of a transfer, the input file's path and sha256 and how the cells were
+  used (thinned in draw i with depth-matching seed s, or not thinned; the refinement and the transfer check on the
+  query's cells).</li>
+<li><strong><code>assign</code> records its <code>alpha</code></strong> (<code>uns['scarlet_options']</code>); the report's assign view reads it, so it no longer
+  needs to be given.</li>
+<li><strong>Renamed records:</strong> <code>uns['scarlet_profile']</code> is now <code>uns['scarlet_assign']</code> (the flip mode and the positive-evidence
+  flag); <code>uns['scarlet_scoring']</code> is now <code>uns['scarlet_floor']</code>; the model's settings
+  record the marker sizes as <code>n_markers</code> and <code>marker_shortlist</code>, and the class-size handling as "standard" or
+  "balanced for unequal class sizes". Records no longer carry a profile.</li>
+<li><strong>Older models.</strong> <code>assign</code> refuses a model without scoring statistics (written before 0.6.0) and asks to learn it
+  again; models written before 0.3.0 are read as written, without conversion.</li>
+<li>The pre-flight summary, the messages and the transfer check's message are in plain words.</li>
+</ul>
+<h2 id="062">0.6.2<a class="headerlink" href="#062" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>New: the <code>report</code> command.</strong> <code>scarlet report RUN</code> (Python: <code>scarlet.report(run)</code>) writes the HTML report of a
+  finished run: one self-contained page plus a bundle of tables, figures and a manifest. A model file gives the
+  learn report (with a cross-validated self-assessment), an annotated <code>.h5ad</code> the assign view, a transfer folder the
+  transfer report. <code>learn --report</code> and <code>transfer --report</code> write it at the end of the run. It needs the <code>report</code>
+  extra (plotly).</li>
+<li><strong><code>learn</code> chooses its technology preset from the reference</strong> (<code>auto</code>, the default): dense when the reference
+  detects at least 5,000 genes per cell on average, else sparse, the rule <code>transfer</code> uses. The pre-flight prints the
+  choice and the model records it.</li>
+<li><strong><code>assign</code> with a dense model reduces the query cells</strong> exactly as <code>learn</code> reduced the reference (the model's
+  targets and its learn seed), as <code>transfer</code> already did. The annotated <code>.h5ad</code> keeps the input's values.</li>
+</ul>
+<h2 id="earlier-versions">Earlier versions<a class="headerlink" href="#earlier-versions" title="Permanent link">&para;</a></h2>
+<p>Versions before 0.6.3 were not public. Among the changes of the earlier versions that 0.6.3 users meet: the floor on detection rates, the
+flip test and the positive-evidence flag (0.6.0); depth matching and the refinement where anchored in <code>transfer</code>
+(0.6.0); 50 markers ranked on a shortlist of 150 for dense data, as for sparse data (0.6.1); the model file, the
+pre-flight summary, the bundled human and mouse blocklists with their gene groups, the class-size handling and the
+label-order-independent bootstrap (0.2.0); the reduced memory use of learning and annotation (0.2.1).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

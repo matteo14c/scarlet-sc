@@ -1,0 +1,1317 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cell-type annotation for single-cell RNA-seq data">
+      
+      
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../guide/learn/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../logo/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Tutorials - SCARLET</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorials" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SCARLET" class="md-header__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCARLET
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorials
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SCARLET" class="md-nav__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    SCARLET
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources-and-licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data sources and licences
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-them-on-your-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run them on your computer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-them-in-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run them in Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading the output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-sources-and-licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data sources and licences
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-them-on-your-computer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run them on your computer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-them-in-google-colab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run them in Google Colab
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tutorials">Tutorials<a class="headerlink" href="#tutorials" title="Permanent link">&para;</a></h1>
+<p>Three notebooks in <code>notebooks/</code> show SCARLET on the data of its benchmark: what each step prints, what it writes,
+and how to read the result. Every code cell is explained, and every setting is at the package default.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">notebook</th>
+<th style="text-align: left;">what it teaches</th>
+<th style="text-align: left;">data (benchmark task)</th>
+<th style="text-align: left;">download</th>
+<th style="text-align: left;">time, cluster node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/matteo14c/scarlet-sc/blob/main/notebooks/01_learn_assign_sparse.ipynb">01_learn_assign_sparse</a></td>
+<td style="text-align: left;"><code>learn</code> and <code>assign</code> on droplet data; the pre-flight; refusals and their reasons; the assign and learn reports; scoring the calls against held-out labels</td>
+<td style="text-align: left;">Baron et al. 2016, human pancreas (inDrop), 8,562 cells (<code>A/pancreas_baron_human</code>)</td>
+<td style="text-align: left;">37 MB</td>
+<td style="text-align: left;">about 1 min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/matteo14c/scarlet-sc/blob/main/notebooks/02_learn_assign_dense.ipynb">02_learn_assign_dense</a></td>
+<td style="text-align: left;">the same on plate data, where SCARLET chooses the dense technology preset</td>
+<td style="text-align: left;">Segerstolpe et al. 2016, human pancreas (Smart-seq2), 2,111 cells (<code>A/pancreas_segerstolpe</code>)</td>
+<td style="text-align: left;">38 MB</td>
+<td style="text-align: left;">under 1 min</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/matteo14c/scarlet-sc/blob/main/notebooks/03_transfer.ipynb">03_transfer</a></td>
+<td style="text-align: left;"><code>transfer</code> across samples (mouse brain, VISp ↔ ALM, 34 cell types) and across technologies (PBMC, Smart-seq2 → 10x v3); the transfer report; agreement across draws; what happens to populations the reference lacks</td>
+<td style="text-align: left;">Tasic et al. 2018, mouse cortex (<code>B/Brain_MouseV1_MouseALM_Labels34</code>); Ding et al. 2020, PBMC (<code>B/PbmcBench_Smart-Seq2</code>, <code>B/PbmcBench_10Xv3</code>)</td>
+<td style="text-align: left;">701 MB</td>
+<td style="text-align: left;">about 8 min (2 CPUs)</td>
+</tr>
+</tbody>
+</table>
+<p>Times were measured on a cluster node with each notebook's own setting (4 CPUs for 01 and 02, 2 for 03). On a
+laptop (14 GB of memory) notebook 03 took about 33 minutes with its 2 CPUs. Each notebook
+downloads its data once, checking each file's SHA-256 (<code>scarlet.datasets.fetch</code>). The files are the inputs of
+SCARLET's benchmark with the benchmark's own selection of cells, compressed; their content is proven identical to
+the benchmark's (<a href="#data-sources-and-licences">Data sources and licences</a>). The notebooks run SCARLET at its package
+defaults (the benchmark ran without the blocklist), on one split or pair, so their numbers can differ from the
+<a href="https://github.com/matteo14c/scarlet-sc/blob/v0.6.3/benchmark/index.md">Benchmarks</a>.</p>
+<h2 id="data-sources-and-licences">Data sources and licences<a class="headerlink" href="#data-sources-and-licences" title="Permanent link">&para;</a></h2>
+<p>The ten files of the <a href="https://github.com/matteo14c/scarlet-sc/releases/tag/v0.6.3">v0.6.3 release</a>. The seven data
+files are benchmark inputs of Abdelaal T, et al. <em>A comparison of automatic cell identification methods for
+single-cell RNA sequencing data.</em> Genome Biology 20, 194 (2019), doi:10.1186/s13059-019-1795-z (data: Zenodo record
+3357167, doi:10.5281/zenodo.3357167, CC BY 4.0), each with its benchmark task's own selection of cells and nothing
+else changed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">file</th>
+<th style="text-align: left;">study</th>
+<th style="text-align: left;">accession</th>
+<th style="text-align: left;">licence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>baron_human.h5ad</code> (notebook 01)</td>
+<td style="text-align: left;">Baron M, et al. Cell Systems 3, 346–360 (2016)</td>
+<td style="text-align: left;">GEO GSE84133</td>
+<td style="text-align: left;">CC BY 4.0, as distributed by the benchmark (Zenodo record 3357167); the original data remain under their repository's terms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>segerstolpe.h5ad</code> (notebook 02)</td>
+<td style="text-align: left;">Segerstolpe A, et al. Cell Metabolism 24, 593–607 (2016)</td>
+<td style="text-align: left;">ArrayExpress E-MTAB-5061</td>
+<td style="text-align: left;">CC BY 4.0, as distributed by the benchmark (Zenodo record 3357167); the original data remain under their repository's terms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pbmc1_smartseq2.h5ad</code> (getting started, notebook 03)</td>
+<td style="text-align: left;">Ding J, et al. Nature Biotechnology 38, 737–746 (2020)</td>
+<td style="text-align: left;">GEO GSE132044; Single Cell Portal SCP424</td>
+<td style="text-align: left;">CC BY 4.0, as distributed by the benchmark (Zenodo record 3357167); the original data remain under their repository's terms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pbmc1_10xv3_query.h5ad</code> (getting started, notebook 03)</td>
+<td style="text-align: left;">Ding J, et al. (2020), as above</td>
+<td style="text-align: left;">GEO GSE132044; Single Cell Portal SCP424</td>
+<td style="text-align: left;">CC BY 4.0, as distributed by the benchmark (Zenodo record 3357167); the original data remain under their repository's terms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pbmc1_10xv3.h5ad</code> (notebook 03)</td>
+<td style="text-align: left;">Ding J, et al. (2020), as above</td>
+<td style="text-align: left;">GEO GSE132044; Single Cell Portal SCP424</td>
+<td style="text-align: left;">CC BY 4.0, as distributed by the benchmark (Zenodo record 3357167); the original data remain under their repository's terms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>amb34_visp.h5ad</code> (notebook 03)</td>
+<td style="text-align: left;">Tasic B, et al. Nature 563, 72–78 (2018)</td>
+<td style="text-align: left;">GEO GSE115746</td>
+<td style="text-align: left;">CC BY 4.0, as distributed by the benchmark (Zenodo record 3357167); the original data remain under their repository's terms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>amb34_alm.h5ad</code> (notebook 03)</td>
+<td style="text-align: left;">Tasic B, et al. (2018), as above</td>
+<td style="text-align: left;">GEO GSE115746</td>
+<td style="text-align: left;">CC BY 4.0, as distributed by the benchmark (Zenodo record 3357167); the original data remain under their repository's terms</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>MANIFEST.tsv</code></td>
+<td style="text-align: left;">written by the SCARLET authors: per data file its size, SHA-256, the SHA-256 of its content (counts, cell and gene names, labels), the benchmark file and task it comes from with that file's SHA-256, the cell selection applied, and its cells, genes and labels</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">BSD 3-Clause, as SCARLET</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>SHA256SUMS</code></td>
+<td style="text-align: left;">written by the SCARLET authors: the SHA-256 of each data file, as <code>sha256sum -c SHA256SUMS</code> reads it</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">BSD 3-Clause, as SCARLET</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ATTRIBUTION.md</code></td>
+<td style="text-align: left;">written by the SCARLET authors: the sources above, to cite with the data</td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">BSD 3-Clause, as SCARLET</td>
+</tr>
+</tbody>
+</table>
+<p>If you use these data, cite the study and the benchmark.</p>
+<h2 id="run-them-on-your-computer">Run them on your computer<a class="headerlink" href="#run-them-on-your-computer" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Get the repository at the release</strong> (the notebooks are in it; <code>--branch</code> takes the release's own version of
+   them):</p>
+<p><code>bash
+git clone --branch v0.6.3 https://github.com/matteo14c/scarlet-sc
+cd scarlet-sc</code></p>
+</li>
+<li>
+<p><strong>Make a fresh environment</strong> with the Python you choose (3.11, 3.12 or 3.13), and activate it. Name the version
+   in the command, so the environment gets that one:</p>
+<p><code>bash
+python3.12 -m venv .venv
+source .venv/bin/activate        # Windows: py -3.12 -m venv .venv, then .venv\Scripts\activate
+python --version                 # the version you chose</code></p>
+<p>With conda instead: <code>conda create -n scarlet python=3.12</code> and <code>conda activate scarlet</code>.</p>
+<p>Each new terminal starts without the environment: activate it again there first (<code>source .venv/bin/activate</code>
+from the <code>scarlet-sc</code> folder, or <code>conda activate scarlet</code>).</p>
+</li>
+<li>
+<p><strong>Install SCARLET with the <code>tutorials</code> extra</strong> (the reports, Jupyter, and the widgets of the progress bars):</p>
+<p><code>bash
+pip install -e ".[tutorials]"</code></p>
+<p>To install everything in one go (the reports, the tutorials and the tools to build this documentation):
+<code>pip install -e ".[tutorials,docs]"</code>.</p>
+</li>
+<li>
+<p><strong>Start Jupyter</strong>:</p>
+<p><code>bash
+jupyter lab notebooks/</code></p>
+<p>Jupyter keeps this terminal busy while it runs, and opens a browser tab (if it does not, open the address it
+prints). Open a notebook and run its cells in order. To stop Jupyter, press Ctrl+C in the terminal.</p>
+<p>Run one notebook at a time: a notebook keeps its memory until it is shut down. Stopping its cells or closing
+its tab does not free it: close the others first with File → Close and Shut Down Notebook.</p>
+<p>Notebook 03 uses 2 CPUs, which fits a laptop. Its memory, measured with 2 CPUs, SCARLET alone (Jupyter and
+the browser come on top): in a system monitor's process list, the notebook's own process (Python, or
+ipykernel) peaks at about 5 GB of resident memory (5.0 GB on a cluster node, 5.3 GB on a laptop); during each
+transfer two more Python processes run the draws beside it. All of SCARLET's processes together, with the
+memory they share counted once, peak at about 7.5 GB: about what the system monitor's total memory in use
+rises by.</p>
+</li>
+</ol>
+<p>The data download themselves on the first run. To download them beforehand, for example on a machine with a better
+connection: <code>python -m scarlet.datasets --dest notebooks/data</code> (each notebook looks for its files in its own
+<code>data/</code> folder). While the repository is private, its release assets need a login: the downloader then uses the
+GitHub CLI (<code>gh auth login</code> first).</p>
+<h2 id="run-them-in-google-colab">Run them in Google Colab<a class="headerlink" href="#run-them-in-google-colab" title="Permanent link">&para;</a></h2>
+<p>Planned for the public release: each notebook will open in Colab from a badge on this page, with nothing installed
+on your computer (a setup cell installs SCARLET there).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1875 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cell-type annotation for single-cell RNA-seq data">
+      
+      
+      
+      
+        <link rel="prev" href="../troubleshooting/">
+      
+      
+        <link rel="next" href="../changelog/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../logo/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Glossary - SCARLET</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#glossary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SCARLET" class="md-header__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCARLET
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Glossary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SCARLET" class="md-nav__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    SCARLET
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blocklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading the output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agreement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anchors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best call
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boundary-cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boundary cell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consensus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consensus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth matching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Draw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doubtful-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Doubtful transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First pass
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flip-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flip test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forced-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forced call
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gene groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker-shortlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marker shortlist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#positive-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Positive evidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refined-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refined call
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refused-cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refused cell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runner-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runner-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-assessment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stable-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stable anchors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology preset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transfer check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unassigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unassigned
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undetermined-across-draws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Undetermined across draws
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unequal-class-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unequal class sizes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unique call
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agreement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anchors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best call
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boundary-cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boundary cell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blocklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consensus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consensus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth matching
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Draw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doubtful-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Doubtful transfer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First pass
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flip-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flip test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forced-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forced call
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gene groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#marker-shortlist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marker shortlist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model file
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#positive-evidence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Positive evidence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refined-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refined call
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refused-cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refused cell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#runner-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Runner-up
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Self-assessment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stable-anchors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stable anchors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technology-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology preset
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transfer-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transfer check
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unassigned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unassigned
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#undetermined-across-draws" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Undetermined across draws
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unequal-class-sizes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unequal class sizes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unique-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unique call
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h1>
+<p>The terms the documentation uses, in alphabetical order.</p>
+<h3 id="agreement">Agreement<a class="headerlink" href="#agreement" title="Permanent link">&para;</a></h3>
+<p>In a transfer, how many <a href="#draw">draws</a> gave a cell's most frequent outcome ("unassigned" counts as an outcome):
+<code>scarlet_best_agreement</code> and <code>scarlet_unique_agreement</code> (for example 9 of 10). Not written in <a href="#quick-mode">quick
+mode</a>.</p>
+<h3 id="anchors">Anchors<a class="headerlink" href="#anchors" title="Permanent link">&para;</a></h3>
+<p>See <a href="#stable-anchors">stable anchors</a>.</p>
+<h3 id="best-call">Best call<a class="headerlink" href="#best-call" title="Permanent link">&para;</a></h3>
+<p><code>scarlet_best</code>: the most likely cell type, or <code>unassigned</code> when the background explains the cell at least as well
+(or the flip test refuses it). See <a href="../output/#the-calls">Reading the output</a>.</p>
+<h3 id="boundary-cell">Boundary cell<a class="headerlink" href="#boundary-cell" title="Permanent link">&para;</a></h3>
+<p>A cell with a <a href="#best-call">best call</a> but no <a href="#unique-call">unique call</a>: its best cell type is not separated from
+the <a href="#runner-up">runner-up</a>. The report's boundary map counts them by best call × runner-up.</p>
+<h3 id="blocklist">Blocklist<a class="headerlink" href="#blocklist" title="Permanent link">&para;</a></h3>
+<p>Genes kept out of the markers before the marker search: technical and broadly expressed genes (stress, ribosomal,
+mitochondrial, sex-linked and cell-cycle genes). SCARLET ships a human and a mouse list, divided into
+<a href="#gene-groups">gene groups</a>; <code>auto</code> chooses between them from the gene names. See <a href="../guide/learn/#blocklist">learn</a>.</p>
+<h3 id="consensus">Consensus<a class="headerlink" href="#consensus" title="Permanent link">&para;</a></h3>
+<p>In a transfer, each cell's final call: the most frequent outcome across the <a href="#draw">draws</a>, kept when at least 8 of
+the 10 draws give it (80 % of the draws, rounded up, for another number of draws); otherwise the cell is unassigned,
+<a href="#undetermined-across-draws">undetermined across draws</a>. A fixed rule: by chance alone, 8 or more of 10 draws agree
+in about 5.5 % of cases.</p>
+<h3 id="depth-matching">Depth matching<a class="headerlink" href="#depth-matching" title="Permanent link">&para;</a></h3>
+<p>In a transfer, the deeper of reference and query is thinned towards the shallower one before the first pass, so
+that both detect comparable numbers of genes. See <a href="../guide/transfer/#depth-matching">transfer</a>.</p>
+<h3 id="draw">Draw<a class="headerlink" href="#draw" title="Permanent link">&para;</a></h3>
+<p>One repetition of a transfer (depth matching, the first pass and the refinement) with its own seed. A transfer runs
+10 draws by default (<code>--draws</code>, <code>--seeds</code>); its calls are the <a href="#consensus">consensus</a> of the draws. One draw is
+<a href="#quick-mode">quick mode</a>.</p>
+<h3 id="doubtful-transfer">Doubtful transfer<a class="headerlink" href="#doubtful-transfer" title="Permanent link">&para;</a></h3>
+<p>The <a href="#transfer-check">transfer check</a>'s flag on a cell type whose reference markers the query confirms poorly (less
+than a fifth of them). It changes no call. See <a href="../output/#qctsv">Reading the output</a>.</p>
+<h3 id="first-pass">First pass<a class="headerlink" href="#first-pass" title="Permanent link">&para;</a></h3>
+<p>In a transfer, the query annotated by the model learned on the reference (<code>first_pass.tsv</code>), before the
+<a href="#refined-call">refinement</a>.</p>
+<h3 id="flip-test">Flip test<a class="headerlink" href="#flip-test" title="Permanent link">&para;</a></h3>
+<p>Every cell is also scored without the floor that keeps detection rates away from 0 and 1. When the most likely cell
+type differs between the two scorings, the call depends on genes the candidate cell type never showed in the
+reference: the cell "flips". <code>assign</code> refuses such cells by default; a transfer's first pass only flags them
+(<code>scarlet_flip</code>) by default. See <a href="../guide/assign/#flags">assign</a>.</p>
+<h3 id="forced-call">Forced call<a class="headerlink" href="#forced-call" title="Permanent link">&para;</a></h3>
+<p><code>scarlet_top1</code>: the most likely cell type for every cell, whatever the background and the test say. It never
+refuses.</p>
+<h3 id="gene-groups">Gene groups<a class="headerlink" href="#gene-groups" title="Permanent link">&para;</a></h3>
+<p>The six groups the bundled blocklists are divided into (<code>core_stress</code>, <code>core_ribosomal</code>, <code>core_mitochondrial</code>,
+<code>core_sex</code>, <code>cell_cycle</code>, <code>stress_extended</code>). A fixed rule on the labels decides which apply; the cell-cycle group
+is left out when a label names dividing cells. See <a href="../advanced/#blocklist_modules">Advanced options</a>.</p>
+<h3 id="identity">Identity<a class="headerlink" href="#identity" title="Permanent link">&para;</a></h3>
+<p>A cell type of the reference as SCARLET learns it: one per label. The columns and tables SCARLET writes call cell
+types identities (for example <code>identity</code> in <code>qc.tsv</code>).</p>
+<h3 id="marker">Marker<a class="headerlink" href="#marker" title="Permanent link">&para;</a></h3>
+<p>A gene that a cell type's cells consistently detect and that is rarely detected elsewhere. Each cell type has 50
+markers by default; assign scores cells on them. See <a href="../guide/learn/#how-learn-works">learn</a>.</p>
+<h3 id="marker-shortlist">Marker shortlist<a class="headerlink" href="#marker-shortlist" title="Permanent link">&para;</a></h3>
+<p>The best-ranked genes of a cell type in one round of the marker search (150 by default). A gene's stability is the
+number of rounds in which it made the shortlist; the markers are the most stable genes. See
+<a href="../advanced/#marker_shortlist">Advanced options</a>.</p>
+<h3 id="model-file">Model file<a class="headerlink" href="#model-file" title="Permanent link">&para;</a></h3>
+<p>The one file <code>learn</code> writes (<code>.scarlet</code>): the markers, the detection rates assign scores, and the run's settings,
+provenance and summary. See <a href="../output/#the-model-file">Reading the output</a>.</p>
+<h3 id="origin">Origin<a class="headerlink" href="#origin" title="Permanent link">&para;</a></h3>
+<p>Where a query cell comes from (a batch, a sample, a technology), named by a column of the query given with
+<code>--origin-col</code>. A transfer matches depths, refines and checks per origin. See
+<a href="../guide/transfer/#origins">transfer</a>.</p>
+<h3 id="positive-evidence">Positive evidence<a class="headerlink" href="#positive-evidence" title="Permanent link">&para;</a></h3>
+<p>A flag on a call whose cell detects fewer of the cell type's markers than a fifth (rounded down) of the number a
+cell of that type is expected to detect (<code>scarlet_pe_low</code>). It changes no call. See
+<a href="../guide/assign/#flags">assign</a>.</p>
+<h3 id="quick-mode">Quick mode<a class="headerlink" href="#quick-mode" title="Permanent link">&para;</a></h3>
+<p>A transfer run once (<code>--draws 1</code>): the same method, one <a href="#draw">draw</a>. Its calls are that draw's: no
+<a href="#consensus">consensus</a>, no <a href="#agreement">agreement</a>, and the calls depend on the seed. About a fifth of the
+time of the default (10 draws) with one CPU (measured: 16 s against 82 s on a PBMC transfer, 41 s against 3.7 min on a
+deep mouse-brain one). See <a href="../guide/transfer/#accurate-and-quick-mode">transfer</a>.</p>
+<h3 id="refined-call">Refined call<a class="headerlink" href="#refined-call" title="Permanent link">&para;</a></h3>
+<p>In a transfer, the final call (<code>labels.tsv</code>): the consensus of the <a href="#draw">draws</a> in which the query is annotated
+again by models learned on the query's own <a href="#stable-anchors">stable anchors</a>. A cell type with fewer than 3 stable
+anchors is not refined and its cells keep their first-pass calls; so do all the cells of an origin with fewer than 2
+refined cell types.</p>
+<h3 id="refused-cell">Refused cell<a class="headerlink" href="#refused-cell" title="Permanent link">&para;</a></h3>
+<p>A cell left <code>unassigned</code> in its best call, its unique call or both, with a reason: background, ambiguity, flip test or (transfer) undetermined across draws.
+See <a href="../output/#the-calls">Reading the output</a>.</p>
+<h3 id="runner-up">Runner-up<a class="headerlink" href="#runner-up" title="Permanent link">&para;</a></h3>
+<p>The cell type ranked next after a cell's best call: in a transfer the most frequent across the <a href="#draw">draws</a>
+(<code>scarlet_runner_up</code>, with <code>scarlet_runner_up_draws</code>); in the learn report's self-assessment the second-ranked cell
+type.</p>
+<h3 id="self-assessment">Self-assessment<a class="headerlink" href="#self-assessment" title="Permanent link">&para;</a></h3>
+<p>In the learn report, the model's own reference annotated by cross-validation: each fold by a model learned on the
+other folds. It shows how well the model separates its own cell types. See
+<a href="../reports/learn/#the-self-assessment">report</a>.</p>
+<h3 id="stable-anchors">Stable anchors<a class="headerlink" href="#stable-anchors" title="Permanent link">&para;</a></h3>
+<p>In a <a href="../guide/transfer/#refinement">transfer</a>, the query cells the first pass called uniquely to the same cell type in
+every <a href="#draw">draw</a> of the run (in <a href="#quick-mode">quick mode</a>, the draw's unique calls). The refinement learns each
+cell type again from its stable anchors, and each stable anchor keeps its label; a cell type with fewer than 3
+stable anchors is not refined.</p>
+<h3 id="technology-preset">Technology preset<a class="headerlink" href="#technology-preset" title="Permanent link">&para;</a></h3>
+<p>The marker search's setting for the data's density: <code>sparse</code> (droplet data such as 10x) or <code>dense</code> (plate data such
+as Smart-seq2). Both read a gene as detected when its count is above 0; they differ in the background penalty of the
+marker search (6 sparse, 0 dense). <code>auto</code> chooses from the data. See <a href="../guide/learn/#technology-preset">learn</a>.</p>
+<h3 id="transfer-check">Transfer check<a class="headerlink" href="#transfer-check" title="Permanent link">&para;</a></h3>
+<p>In a transfer, the share of each cell type's reference markers that markers learned on the query confirm
+(<code>qc.tsv</code>); below 0.2 the cell type is flagged <a href="#doubtful-transfer">doubtful transfer</a>. See
+<a href="../guide/transfer/#the-transfer-check">transfer</a>.</p>
+<h3 id="unassigned">Unassigned<a class="headerlink" href="#unassigned" title="Permanent link">&para;</a></h3>
+<p>The value of a refused call.</p>
+<h3 id="undetermined-across-draws">Undetermined across draws<a class="headerlink" href="#undetermined-across-draws" title="Permanent link">&para;</a></h3>
+<p>The reason of a transfer's unassigned cell when no outcome won clearly across the <a href="#draw">draws</a>: the most frequent
+outcome was given by fewer than 8 of the 10 draws (the <a href="#consensus">consensus</a> rule).</p>
+<h3 id="unequal-class-sizes">Unequal class sizes<a class="headerlink" href="#unequal-class-sizes" title="Permanent link">&para;</a></h3>
+<p>How SCARLET handles a reference where one cell type holds a large share of the cells (<code>imbalanced</code>): <strong>standard</strong>,
+or <strong>balanced for unequal class sizes</strong> when the largest cell type holds more than a third of the cells. See
+<a href="../advanced/#unequal-class-sizes-imbalanced">Advanced options</a>.</p>
+<h3 id="unique-call">Unique call<a class="headerlink" href="#unique-call" title="Permanent link">&para;</a></h3>
+<p><code>scarlet_unique</code>: the best cell type only when it is clearly better than its competitor (<code>scarlet_fdr</code> below
+<code>alpha</code>, 0.01), else <code>unassigned</code>. See <a href="../output/#the-calls">Reading the output</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>

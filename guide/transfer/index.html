@@ -1,0 +1,1865 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cell-type annotation for single-cell RNA-seq data">
+      
+      
+      
+      
+        <link rel="prev" href="../assign/">
+      
+      
+        <link rel="next" href="../../reports/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../logo/favicon-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Transfer - SCARLET</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transfer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SCARLET" class="md-header__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SCARLET
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transfer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SCARLET" class="md-nav__button md-logo" aria-label="SCARLET" data-md-component="logo">
+      
+  <img src="../../logo/scarlet-mark.svg" alt="logo">
+
+    </a>
+    SCARLET
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/matteo14c/scarlet-sc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accurate-and-quick-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accurate and quick mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First pass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refinement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-transfer-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The transfer check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-time-memory-and-cpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run time, memory and CPUs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run time, memory and CPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-ncpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing --ncpu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hard transfers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-transfer-writes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What transfer writes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-go-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What can go wrong
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reports
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/learn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learn report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/assign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assign report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reports/transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transfer report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blocklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocklist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../limitations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Known limitations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reading the output
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Command line
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DEPENDENCIES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependencies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accurate-and-quick-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accurate and quick mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reproducibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Depth matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-preset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology preset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-pass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First pass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refinement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Refinement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-transfer-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The transfer check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-time-memory-and-cpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run time, memory and CPUs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run time, memory and CPUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-ncpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Choosing --ncpu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hard-transfers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hard transfers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-transfer-writes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What transfer writes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-go-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What can go wrong
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="transfer">transfer<a class="headerlink" href="#transfer" title="Permanent link">&para;</a></h1>
+<p><code>transfer</code> annotates a query with the labels of a reference of the same species, in one step: it matches the
+depths of the two, learns on the reference, annotates the query (the <strong>first pass</strong>), learns again on the query's
+own stably anchored cells and annotates the query with that model (the <strong>refinement</strong>), and checks each cell type.
+The whole transfer is repeated in <strong>draws</strong> (10 by default), each with its own seed, and each cell's final call is
+the outcome at least 8 of the 10 draws agree on. It is the command for a query of another depth, protocol or
+technology than the reference.</p>
+<pre><code class="language-bash">scarlet transfer --reference reference.h5ad --labels cell_type --query query.h5ad --output transfer/
+</code></pre>
+<pre><code class="language-python">import scarlet
+
+if __name__ == &quot;__main__&quot;:   # needed in a script when ncpu is above 1; harmless otherwise
+    res = scarlet.transfer(&quot;reference.h5ad&quot;, &quot;cell_type&quot;, &quot;query.h5ad&quot;, &quot;transfer/&quot;, ncpu=4)
+</code></pre>
+<p>In a Python <strong>script</strong>, call <code>transfer</code> under <code>if __name__ == "__main__":</code> when <code>ncpu</code> is above 1: its draws run in
+new Python processes, which import the script; without the guard SCARLET stops with a message saying so. Notebooks
+and the command line need nothing.</p>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>reference</code>: the labelled reference, an <code>.h5ad</code> file (or an AnnData) of counts. Reference cells without a label
+  are not used.</li>
+<li><code>labels</code>: the <code>obs</code> column of the reference with the cell types.</li>
+<li><code>query</code>: the cells to annotate, an <code>.h5ad</code> file (or an AnnData) of counts, with the same kind of gene names.</li>
+<li><code>output</code>: the output folder.</li>
+</ul>
+<p>Depth matching reads expression values, so both inputs must be non-negative counts.</p>
+<h2 id="origins">Origins<a class="headerlink" href="#origins" title="Permanent link">&para;</a></h2>
+<p>A query often pools cells of several batches, samples or technologies. <code>--origin-col</code> names a column of the query's
+<code>obs</code> that says where each cell comes from (never the labels). Depth matching, the refinement and the transfer check
+are then done separately for each origin. Without it the whole query is one origin, called <code>all</code>.</p>
+<h2 id="the-steps">The steps<a class="headerlink" href="#the-steps" title="Permanent link">&para;</a></h2>
+<h3 id="accurate-and-quick-mode">Accurate and quick mode<a class="headerlink" href="#accurate-and-quick-mode" title="Permanent link">&para;</a></h3>
+<p>Depth matching and the marker search are random steps: a different seed thins different detections and draws
+different cells for the markers, and some cells change call from one seed to another. <code>transfer</code> therefore repeats
+depth matching, the first pass and the refinement in <strong>draws</strong>, each with its own seed from <code>--seeds</code> (by default 1,
+2, ... up to the number of draws).</p>
+<ul>
+<li><strong>Accurate mode</strong> (the default, <code>--draws 10</code>). Each cell's final call is the <strong>consensus</strong> of the 10 draws,
+  computed separately for the best and the unique call: the outcome most draws give, where "unassigned" counts as an
+  outcome, is the final call when <strong>at least 8 of the 10 draws</strong> give it. Otherwise the cell is <code>unassigned</code> with
+  the reason "undetermined across draws". This is a fixed rule: if a cell's two leading outcomes were equally likely
+  in every draw, 8 or more of 10 draws would agree on one of them by chance in about 5.5 % of cells (one-sided p =
+  0.055). Each output column <code>scarlet_best_agreement</code> / <code>scarlet_unique_agreement</code> says how many draws gave the
+  cell's outcome. With another number of draws, a final call needs 80 % of them, rounded up: 16 of 20, 4 of 5, 2 of
+  2.</li>
+<li><strong>Quick mode</strong> (<code>--draws 1</code>). The transfer runs once: the same method, one draw. Its calls are that draw's, so
+  there is no consensus, no per-cell agreement (the agreement columns are not written) and no cell is "undetermined
+  across draws". What quick mode gives up: its calls depend on the seed (<code>--seeds 2</code> gives another draw, and some
+  cells change call), and its stable anchors are that draw's unique calls, so the refinement learns from more,
+  less reliable anchors. On the published benchmarks, quick mode refused far fewer cells of the negative controls
+  (cells of a tissue absent from the reference) than accurate mode after refinement: 42–71 % against 81–100 %
+  (refined best), and the median F1 of a test sample moved by more than 2 points from one seed to another in about
+  three quarters of the samples. It takes a fifth to a quarter of the time with one CPU (see
+  <a href="#run-time-memory-and-cpus">Run time, memory and CPUs</a>).</li>
+</ul>
+<h3 id="reproducibility">Reproducibility<a class="headerlink" href="#reproducibility" title="Permanent link">&para;</a></h3>
+<p>The same inputs, options and seeds give the same output, byte for byte, whatever <code>--ncpu</code>, on the same operating
+system, Python, maths libraries and CPU type. Results are identical on machines with the same CPU vector
+instructions; in our tests, a laptop without AVX-512 matched a server with it switched off byte for byte. Where the
+instructions differ, <code>assign</code> still gives identical calls, and <code>transfer</code> can differ in a few cells (21 of 2,990 in
+our PBMC example): almost all at the 8-of-10 agreement threshold, and occasionally (1 of the 21) a cell beyond it,
+because refinement learns from the stable anchors. Another seed list gives
+comparable results, not the same: on the published benchmarks' transfer tasks, two seed lists (1–10 and 1001–1010)
+gave the same final call for 77 % to 99.8 % of the cells of a task, and the task's median F1 differed by at most 1.9
+points (% unlabelled by at most 4 points). Small references vary more: on test samples whose cell types have only a
+few hundred reference cells each, the median F1 moved by more than 2 points between the two seed lists in about one
+sample in five.</p>
+<h3 id="depth-matching">Depth matching<a class="headerlink" href="#depth-matching" title="Permanent link">&para;</a></h3>
+<p>Reference and query of different depth differ in which genes they detect at all, and SCARLET reads detection. With
+<code>--depth-match yes</code> (the default), the deeper side is thinned towards the shallower one before the first pass,
+separately for each origin. The depth of a side is the median number of genes detected per cell, counted on the
+genes both sides detect; with equal depth nothing is thinned. The thinning fits, across the shared genes, an
+increasing curve from each gene's mean expression on the deep side to its detection rate on the shallow side, and
+keeps each detection on the deep side with the probability that brings its gene to the fitted rate. It does not use
+the labels. Each draw thins with its own seed (per origin), so each draw sees a different thinning.</p>
+<p>Thinning affects the first pass only: the refinement learns on the query's own cells, unthinned. When the reference
+is thinned, one reference model is learned per origin. With depth matching on, each origin is annotated
+separately. <code>--depth-match no</code> skips this step.</p>
+<h3 id="technology-preset">Technology preset<a class="headerlink" href="#technology-preset" title="Permanent link">&para;</a></h3>
+<p>With <code>--technology auto</code> (the default) the technology preset is chosen from the <strong>shallower side</strong>: <code>dense</code> only
+when the reference and every query origin detect at least 5,000 genes per cell on average, <code>sparse</code> otherwise.
+After depth matching both sides have about the shallower side's density, so this is the density the models see. The
+pre-flight prints both densities, the gene overlap, the choice and a plain recommendation. <code>--technology sparse</code> or
+<code>dense</code> is used as given; what the presets do is described in <a href="../learn/#technology-preset">learn</a>.</p>
+<h3 id="first-pass">First pass<a class="headerlink" href="#first-pass" title="Permanent link">&para;</a></h3>
+<p>In each draw, the reference is learned and the query annotated, as <a href="../learn/"><code>learn</code></a> and <a href="../assign/"><code>assign</code></a>
+would. The flip test (see <a href="../assign/#flags">assign</a>) is recorded as a flag (<code>--flip flag</code>, the default) and the calls
+are kept: across datasets the accuracy of flipped calls varies widely; with <code>--flip refuse</code>, flipped cells are
+refused, cannot be stable anchors and stay refused in that draw's final calls.
+The consensus of the draws' first-pass calls is written to <code>first_pass.tsv</code>.</p>
+<h3 id="refinement">Refinement<a class="headerlink" href="#refinement" title="Permanent link">&para;</a></h3>
+<p>With <code>--refine yes</code> (the default), the first pass's stably called cells teach SCARLET what each cell type looks like
+in the query itself. Per origin:</p>
+<ul>
+<li>the <strong>stable anchors</strong> of a cell type are the cells the first pass called uniquely to that cell type in every draw
+  of the run (in quick mode: the draw's unique calls). They are found once and are the same in every draw;</li>
+<li>a cell type with at least 3 stable anchors is <strong>refined</strong>: in each draw SCARLET learns again on the stable anchors
+  of the refined cell types, with their anchor labels and the draw's seed, and annotates the origin's cells with that
+  model. Its <strong>background</strong>, the profile a cell must fit better than to be called at all, is the detection rate of
+  each gene over all the origin's query cells;</li>
+<li>a cell type with fewer than 3 stable anchors (zero included) is <strong>not refined</strong>: in each draw, the cells whose
+  first-pass best call is that cell type keep that draw's first-pass calls; <code>labels.tsv</code> notes "not refined: not
+  anchored stably" in <code>scarlet_refine_note</code> for the cells that kept their first-pass calls in more than half the
+  draws;</li>
+<li>an origin with fewer than 2 refined cell types is <strong>not refined</strong>: all its cells keep their first-pass calls in
+  every draw, and <code>labels.tsv</code> notes "origin not refined: fewer than 2 cell types anchored stably";</li>
+<li>every stable anchor keeps its anchor label in the refined calls (flagged <code>scarlet_stable_anchor</code> in
+  <code>first_pass.tsv</code> and <code>labels.tsv</code>), also in an origin that is not refined.</li>
+</ul>
+<p>One round per draw. The refinement does not apply the flip test. The consensus of the draws' refined calls is
+written to <code>labels.tsv</code>; the stable anchors of every cell type, and whether it was refined, are in
+<code>transfer_record.json</code>. <code>--refine no</code> makes the first-pass consensus final.</p>
+<h3 id="the-transfer-check">The transfer check<a class="headerlink" href="#the-transfer-check" title="Permanent link">&para;</a></h3>
+<p>With <code>--qc yes</code> (the default), SCARLET learns markers on the query with the final calls (cell types with at least 3
+cells; at least 2 such cell types per origin) and measures, for each cell type, the share of the reference's markers
+that the query confirms (<code>share_conserved</code> in <code>qc.tsv</code>). A cell type below 0.2 is flagged <code>doubtful_transfer</code>. The
+flag points to cell types whose transfer deserves a closer look; it changes no call. How reliable it is:
+<a href="../../output/#qctsv">Reading the output</a>.</p>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">what it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>--origin-col</code></td>
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">the query's <code>obs</code> column naming each cell's origin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--refine</code></td>
+<td style="text-align: left;"><code>yes</code></td>
+<td style="text-align: left;">refine on the query's own anchors</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--depth-match</code></td>
+<td style="text-align: left;"><code>yes</code></td>
+<td style="text-align: left;">match the depths of reference and query before the first pass</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--qc</code></td>
+<td style="text-align: left;"><code>yes</code></td>
+<td style="text-align: left;">the transfer check per cell type</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--technology</code></td>
+<td style="text-align: left;"><code>auto</code></td>
+<td style="text-align: left;"><code>auto</code> (from the shallower side), <code>sparse</code> or <code>dense</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--blocklist</code></td>
+<td style="text-align: left;"><code>auto</code></td>
+<td style="text-align: left;">as in <a href="../learn/#blocklist">learn</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--imbalanced</code></td>
+<td style="text-align: left;"><code>auto</code></td>
+<td style="text-align: left;">as in <a href="../learn/#unequal-class-sizes">learn</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--gene-col</code></td>
+<td style="text-align: left;"><code>index</code></td>
+<td style="text-align: left;">the <code>var</code> column with the gene names; <code>index</code> uses the <code>var</code> names</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--draws</code></td>
+<td style="text-align: left;"><code>10</code></td>
+<td style="text-align: left;">how many times the transfer is repeated, each time with its own seed; <code>1</code> is quick mode</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--seeds</code></td>
+<td style="text-align: left;"><code>1,2,...</code></td>
+<td style="text-align: left;">the draws' seeds, separated by commas (by default 1 up to the number of draws)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--flip</code></td>
+<td style="text-align: left;"><code>flag</code></td>
+<td style="text-align: left;">the flip test of the first pass: <code>flag</code> (recorded, the calls kept) or <code>refuse</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--chunk-size</code></td>
+<td style="text-align: left;"><code>10000</code></td>
+<td style="text-align: left;">cells scored at a time; lower it to use less memory; it does not change the result</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--ncpu</code></td>
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;">the draws run side by side, up to this many at a time; it does not change the result</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--report</code></td>
+<td style="text-align: left;">off</td>
+<td style="text-align: left;">also write the <a href="../../reports/transfer/">transfer report</a> when the run ends</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>--verbosity</code></td>
+<td style="text-align: left;"><code>normal</code></td>
+<td style="text-align: left;">what the command prints: <code>normal</code> (the pre-flight, one progress bar, one line per draw, the result), <code>quiet</code> (nothing), <code>full</code> (every step of every draw); it does not change the result</td>
+</tr>
+</tbody>
+</table>
+<p><code>--seeds</code> is an <a href="../../advanced/#seeds">advanced option</a>, as are <code>--n-markers</code>, <code>--marker-shortlist</code>,
+<code>--n-iterations</code>, <code>--n-cells</code>, <code>--blocklist-modules</code> and <code>--alpha</code>; the published benchmarks hold at their defaults
+only.</p>
+<h2 id="run-time-memory-and-cpus">Run time, memory and CPUs<a class="headerlink" href="#run-time-memory-and-cpus" title="Permanent link">&para;</a></h2>
+<p>Measured with SCARLET 0.6.3 on two of the published benchmarks' transfer tasks (Abdelaal et al. 2019), one fold
+each, and on a large query, as a user runs it: the command line, every option at its default (including
+<code>blocklist auto</code>), <code>--ncpu k</code> on k physical CPU cores (the run confined to them, one thread per core); the whole
+<code>transfer</code> run, from reading the input files to writing its outputs, without the report, one run each. Peak memory
+is that of all SCARLET's processes together.</p>
+<p><strong>PBMC, 10x v2 → six other protocols</strong>: 6,444 reference / 16,710 query cells, about 900 genes detected per cell,
+sparse preset.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">mode</th>
+<th style="text-align: left;"><code>--ncpu 1</code></th>
+<th style="text-align: left;"><code>--ncpu 2</code></th>
+<th style="text-align: left;"><code>--ncpu 5</code></th>
+<th style="text-align: left;"><code>--ncpu 10</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">accurate (10 draws, the default)</td>
+<td style="text-align: left;">82 s, 0.5 GB</td>
+<td style="text-align: left;">51 s, 1.3 GB</td>
+<td style="text-align: left;">28 s, 2.3 GB</td>
+<td style="text-align: left;">25 s, 3.7 GB</td>
+</tr>
+<tr>
+<td style="text-align: left;">quick (<code>--draws 1</code>)</td>
+<td style="text-align: left;">16 s, 0.5 GB</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>A large query: the same PBMC 10x v2 reference → all 65,943 cells of the Zheng 68K dataset</strong>: about 550 genes
+detected per query cell, sparse preset (not a benchmark task).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">mode</th>
+<th style="text-align: left;"><code>--ncpu 1</code></th>
+<th style="text-align: left;"><code>--ncpu 2</code></th>
+<th style="text-align: left;"><code>--ncpu 5</code></th>
+<th style="text-align: left;"><code>--ncpu 10</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">accurate (10 draws, the default)</td>
+<td style="text-align: left;">42 s, 1.9 GB</td>
+<td style="text-align: left;">30 s, 2.4 GB</td>
+<td style="text-align: left;">22 s, 3.9 GB</td>
+<td style="text-align: left;">21 s, 5.9 GB</td>
+</tr>
+<tr>
+<td style="text-align: left;">quick (<code>--draws 1</code>)</td>
+<td style="text-align: left;">10 s, 1.9 GB</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mouse brain, one region → the other</strong>: 8,128 reference / 12,552 query cells, about 11,000 genes detected per
+cell, dense preset.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">mode</th>
+<th style="text-align: left;"><code>--ncpu 1</code></th>
+<th style="text-align: left;"><code>--ncpu 2</code></th>
+<th style="text-align: left;"><code>--ncpu 5</code></th>
+<th style="text-align: left;"><code>--ncpu 10</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">accurate (10 draws, the default)</td>
+<td style="text-align: left;">3.7 min, 3.1 GB</td>
+<td style="text-align: left;">2.2 min, 6.0 GB</td>
+<td style="text-align: left;">71 s, 10.4 GB</td>
+<td style="text-align: left;">52 s, 17.7 GB</td>
+</tr>
+<tr>
+<td style="text-align: left;">quick (<code>--draws 1</code>)</td>
+<td style="text-align: left;">41 s, 3.0 GB</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Deep data need more memory.</strong> The brain task has fewer cells than the PBMC task but detects about 12 times as
+  many genes per cell, and needed about 6 times the memory: a deep dataset of brain size needs about 3 GB with one
+  CPU.</li>
+<li><strong>Accurate mode.</strong> With <code>--ncpu k</code> the draws run side by side, up to k at a time; they share the input data and
+  each adds its own working memory: the run gets faster and needs more memory (with 5 CPUs: brain 3.1 times faster
+  with 3.3 times the memory, PBMC 3.2 times faster with 4.1 times the memory). The steps before and after the draws
+  run once, with one CPU: the less time the draws take next to them, the less extra CPUs help (the large query: 1.9
+  times faster with 10 CPUs). The second CPU added at most the 1-CPU memory plus 0.5 GB, each further CPU at most
+  half the 1-CPU memory plus 1 GB.</li>
+<li><strong>Quick mode</strong> takes a fifth to a quarter of accurate mode's time with one CPU. With one draw,
+  <code>--ncpu</code> only runs steps inside it side by side: little or no faster, and about the same memory as with one CPU.</li>
+<li><strong>The report is a separate step</strong> (<code>scarlet report</code>, or <code>--report</code>), with its own time and memory: with one CPU
+  49 s and 0.9 GB on the PBMC transfer, 70 s and 1.2 GB on the large query, 1.7 min and 3.7 GB on the brain one,
+  more than the brain transfer itself; <code>--ncpu</code> changes it little.</li>
+<li><strong>The result does not depend on <code>--ncpu</code>:</strong> the same inputs, options and seeds give the same output, byte for
+  byte.</li>
+</ul>
+<h3 id="choosing-ncpu">Choosing <code>--ncpu</code><a class="headerlink" href="#choosing-ncpu" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Choose a number of CPUs that divides the number of draws:</strong> with the default 10 draws, 1, 2, 5 or 10. The draws
+   run in rounds of up to <code>--ncpu</code> at a time, so the run takes about as long as its number of rounds: 5 CPUs run the
+   10 draws in two rounds, and so do 6 to 9 CPUs, so values between 5 and 10 bring no further speed-up and only add
+   memory (3 or 4 CPUs, in four or three rounds, fall between 2 and 5).</li>
+<li><strong>Memory decides how high to go.</strong> Take the 1-CPU peak memory M of the table closer to your data, by genes
+   detected per cell first, then by the number of cells. The second CPU added at most M + 0.5 GB and each further
+   CPU at most M ÷ 2 + 1 GB (measured up to 10 CPUs), so k CPUs (k ≥ 2) need at most
+   2 × M + 0.5 GB + (k − 2) × (M ÷ 2 + 1 GB); take the largest of 1, 2, 5 and 10 that fits in the free memory.
+   For a deep dataset of brain size (M about 3.1 GB): 2 CPUs with 6.7 GB free, 5 with 14.4 GB, 10 with 27 GB
+   (measured: 6.0, 10.4 and 17.7 GB). For PBMC size (M about 0.5 GB): 2 CPUs with 1.5 GB, 5 with 5.3 GB, 10 with
+   11.5 GB (measured: 1.3, 2.3 and 3.7 GB).</li>
+<li>Quick mode needs about the 1-CPU memory whatever <code>--ncpu</code>; extra CPUs save little or no time.</li>
+<li>If you also want the report, it needs its own memory (above: up to 4.2 GB on the brain transfer).</li>
+</ol>
+<p>If a run stops for lack of memory, lower <code>--ncpu</code> first. In a Python script, call <code>transfer</code> with <code>ncpu</code> above 1
+from code under <code>if __name__ == "__main__":</code> (the draws run in new Python processes, which import your script
+again); in a notebook nothing is needed.</p>
+<h2 id="hard-transfers">Hard transfers<a class="headerlink" href="#hard-transfers" title="Permanent link">&para;</a></h2>
+<p>Some transfers are hard, and SCARLET then refuses more cells rather than guess: a query of another technology than
+the reference (for example a plate-based query with a droplet reference, or the reverse), a reference and a query
+of very different sizes (a reference with a few hundred cells per cell type), and closely related populations
+(subtypes that differ by few genes). The refused cells are reported with their reason (background, ambiguity,
+undetermined across draws), and the report shows which cell types they come from.</p>
+<h2 id="what-transfer-writes">What transfer writes<a class="headerlink" href="#what-transfer-writes" title="Permanent link">&para;</a></h2>
+<p>Everything goes into the output folder:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">file</th>
+<th style="text-align: left;">what it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>first_pass.tsv</code></td>
+<td style="text-align: left;">the consensus of the draws' first-pass calls (the reference model's calls on the query)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>labels.tsv</code></td>
+<td style="text-align: left;">the final calls: the consensus of the draws' refined calls</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>qc.tsv</code></td>
+<td style="text-align: left;">with <code>--qc yes</code>: the transfer check per origin and cell type</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>transfer_record.json</code></td>
+<td style="text-align: left;">the full record of the run: options, the settings resolved, the pre-flight, the draws and their seeds, depth matching per draw and origin, the refinement per origin, each draw's result, the check, the summary, versions</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>summary.txt</code></td>
+<td style="text-align: left;">the run's <a href="../../output/#the-run-summary">summary</a></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reference.scarlet</code> (or <code>reference_&lt;origin&gt;.scarlet</code>)</td>
+<td style="text-align: left;">the first draw's reference model(s), usable with <code>assign</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>refine_&lt;origin&gt;.scarlet</code></td>
+<td style="text-align: left;">the first draw's refinement model of each refined origin</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>report/</code></td>
+<td style="text-align: left;">with <code>--report</code>: the transfer report</td>
+</tr>
+</tbody>
+</table>
+<p>Columns: <a href="../../output/#transfer">Reading the output</a>. In Python, <code>transfer</code> returns a result with
+<code>reference_models</code>, <code>query_models</code> (the first draw's refinement models, by origin), <code>first_pass</code>, <code>labels</code>, <code>qc</code> and
+<code>record</code>
+(the content of <code>transfer_record.json</code>). A refined model can annotate another query:</p>
+<pre><code class="language-python">import scarlet
+
+if __name__ == &quot;__main__&quot;:
+    res = scarlet.transfer(&quot;reference.h5ad&quot;, &quot;cell_type&quot;, &quot;query.h5ad&quot;, &quot;transfer/&quot;, origin_col=&quot;batch&quot;)
+    scarlet.assign(res.query_models[&quot;batch1&quot;], &quot;query2.h5ad&quot;, &quot;query2_annotated.h5ad&quot;)
+</code></pre>
+<h2 id="what-can-go-wrong">What can go wrong<a class="headerlink" href="#what-can-go-wrong" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A label or origin column that is not in <code>obs</code>, negative values, little gene overlap: see
+  <a href="../../troubleshooting/">Troubleshooting</a>.</li>
+<li><strong>Query cell types the reference does not have.</strong> SCARLET calls only the cell types it learned. A cell of another
+  type is refused when the background explains it at least as well; otherwise it receives the most likely learned
+  cell type. The refinement can also turn cells refused in the first pass into calls; the report shows these cells,
+  and the first-pass calls stay in <code>first_pass.tsv</code>.</li>
+</ul>
+<p>See also: <a href="../../output/">Reading the output</a>, <a href="../../advanced/">Advanced options</a>,
+<a href="../../troubleshooting/">Troubleshooting</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
