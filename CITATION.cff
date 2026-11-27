@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: >-
+  If you use SCARLET in your work, please cite the software as below.
+  A paper is in preparation; this file will point to it when it is published.
+type: software
+title: "SCARLET: reliable and interpretable cell-type annotation for single-cell RNA-seq"
+abstract: >-
+  SCARLET annotates single-cell RNA-seq data from a labelled reference: it learns each
+  identity's marker programme and a background, assigns new cells with explicit refusals
+  (background, ambiguity), and transfers labels between technologies with depth matching.
+authors:
+  - family-names: Traversa
+    given-names: Daniele
+  - family-names: Kaftalli
+    given-names: Jurgen
+  - family-names: Canevotti
+    given-names: Alessia
+  - family-names: Rossi
+    given-names: Francesco
+  - family-names: Pesole
+    given-names: Graziano
+  - family-names: Chiara
+    given-names: Matteo
+version: 0.6.3
+date-released: 2026-11-27
+license: BSD-3-Clause
+repository-code: "https://github.com/matteo14c/scarlet-sc"
+url: "https://github.com/matteo14c/scarlet-sc"
+keywords:
+  - single-cell RNA-seq
+  - cell type annotation
+  - label transfer
+  - abstention

@@ -1,0 +1,64 @@
+site_name: SCARLET
+site_description: Cell-type annotation for single-cell RNA-seq data
+repo_url: https://github.com/matteo14c/scarlet-sc
+docs_dir: docs
+strict: true
+# the local preview (contributors: mkdocs serve) on its own port, clear of Jupyter's 8888 and other servers' 8000
+dev_addr: 127.0.0.1:8001
+
+theme:
+  name: material
+  logo: logo/scarlet-mark.svg
+  favicon: logo/favicon-32.png
+
+nav:
+  - Home: index.md
+  - Getting started: getting-started.md
+  - Tutorials: tutorials.md
+  - Guide:
+      - Learn: guide/learn.md
+      - Assign: guide/assign.md
+      - Transfer: guide/transfer.md
+  - Reports:
+      - reports/index.md
+      - Learn report: reports/learn.md
+      - Assign report: reports/assign.md
+      - Transfer report: reports/transfer.md
+  - Blocklist: blocklist.md
+  - Known limitations: limitations.md
+  - Reading the output: output.md
+  - Advanced options: advanced.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Changelog: changelog.md
+  - Reference:
+      - Command line: reference/cli.md
+      - Python: reference/python.md
+  - Dependencies: DEPENDENCIES.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            docstring_style: google
+            show_source: false
+            show_root_heading: true
+            show_root_full_path: false
+            heading_level: 2
+            separate_signature: true
+            show_signature_annotations: false
+            members_order: source
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true

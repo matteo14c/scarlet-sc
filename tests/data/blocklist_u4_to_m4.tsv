@@ -1,0 +1,456 @@
+# U4 row -> mouse genes (MGI HOM primary, Ensembl 116 fallback)
+human_symbol	Category	mapping_type	mapping_source	mouse_symbols
+FOS	core_stress	one2one	MGI HOM	Fos
+FOSB	core_stress	one2one	MGI HOM	Fosb
+JUN	core_stress	one2one	MGI HOM	Jun
+JUNB	core_stress	one2one	MGI HOM	Junb
+JUND	core_stress	one2one	MGI HOM	Jund
+EGR1	core_stress	one2one	MGI HOM	Egr1
+ATF3	core_stress	one2one	MGI HOM	Atf3
+DUSP1	core_stress	one2one	MGI HOM	Dusp1
+IER2	core_stress	one2one	MGI HOM	Ier2
+IER3	core_stress	one2one	MGI HOM	Ier3
+ZFP36	core_stress	one2one	MGI HOM	Zfp36
+HSPA1A	core_stress	one2one	MGI HOM	Hspa1a
+HSPA1B	core_stress	one2one	MGI HOM	Hspa1b
+DNAJB1	core_stress	one2one	MGI HOM	Dnajb1
+PPP1R15A	core_stress	one2one	MGI HOM	Ppp1r15a
+HSPB1	core_stress	one2one	MGI HOM	Hspb1
+HSPA6	core_stress	none		
+BAG3	core_stress	one2one	MGI HOM	Bag3
+HSP90AA1	core_stress	many2one	MGI HOM	Hsp90aa1
+DNAJA1	core_stress	one2one	MGI HOM	Dnaja1
+HSPH1	core_stress	one2one	MGI HOM	Hsph1
+RPL13A	core_ribosomal	one2one	MGI HOM	Rpl13a
+RPL35	core_ribosomal	one2one	MGI HOM	Rpl35
+RPL36	core_ribosomal	one2many	MGI HOM	Rpl36;Rpl36-ps4
+RPL4	core_ribosomal	one2one	MGI HOM	Rpl4
+RPL8	core_ribosomal	one2one	MGI HOM	Rpl8
+RPL9	core_ribosomal	one2many	MGI HOM	Rpl9;Rpl9-ps6
+RPL10	core_ribosomal	one2one	MGI HOM	Rpl10
+RPL11	core_ribosomal	one2one	MGI HOM	Rpl11
+RPL12	core_ribosomal	one2one	MGI HOM	Rpl12
+RPL13	core_ribosomal	one2one	MGI HOM	Rpl13
+RPL15	core_ribosomal	one2one	MGI HOM	Rpl15
+RPL18	core_ribosomal	one2one	MGI HOM	Rpl18
+RPL18A	core_ribosomal	one2one	MGI HOM	Rpl18a
+RPL19	core_ribosomal	one2one	MGI HOM	Rpl19
+RPL22	core_ribosomal	one2one	MGI HOM	Rpl22
+RPL23A	core_ribosomal	one2one	MGI HOM	Rpl23a
+RPL24	core_ribosomal	one2one	MGI HOM	Rpl24
+RPL26	core_ribosomal	many2one	MGI HOM	Rpl26
+RPL27	core_ribosomal	one2one	MGI HOM	Rpl27
+RPL30	core_ribosomal	one2one	MGI HOM	Rpl30
+RPL27A	core_ribosomal	one2one	MGI HOM	Rpl27a
+RPL28	core_ribosomal	one2one	MGI HOM	Rpl28
+RPL29	core_ribosomal	one2many	MGI HOM	Rpl27rt;Rpl29
+RPL31	core_ribosomal	one2one	MGI HOM	Rpl31
+RPL32	core_ribosomal	one2one	MGI HOM	Rpl32
+RPL34	core_ribosomal	one2many	MGI HOM	Rpl34;Rpl34-ps1
+RPL35A	core_ribosomal	one2one	MGI HOM	Rpl35a
+RPL36AL	core_ribosomal	many2many	MGI HOM	Rpl36al;Gm6525
+RPL37	core_ribosomal	one2many	MGI HOM	Rpl37;Rpl37rt
+RPL37A	core_ribosomal	many2one	MGI HOM	Rpl37a
+RPL38	core_ribosomal	one2one	MGI HOM	Rpl38
+RPL39	core_ribosomal	one2one	MGI HOM	Rpl39
+RPL41	core_ribosomal	one2one	MGI HOM	Rpl41
+RPLP0	core_ribosomal	many2one	MGI HOM	Rplp0
+RPLP1	core_ribosomal	one2many	MGI HOM	Rplp1;Rplp1rt
+RPLP2	core_ribosomal	one2many	MGI HOM	Rplp2;Rplp2-ps1
+RPL3	core_ribosomal	one2one	MGI HOM	Rpl3
+RPL5	core_ribosomal	one2one	MGI HOM	Rpl5
+RPL6	core_ribosomal	one2one	MGI HOM	Rpl6
+RPL7	core_ribosomal	one2one	MGI HOM	Rpl7
+RPL7A	core_ribosomal	one2one	MGI HOM	Rpl7a
+RPL23	core_ribosomal	one2one	MGI HOM	Rpl23
+RPL14	core_ribosomal	one2one	MGI HOM	Rpl14
+RPL10A	core_ribosomal	one2one	MGI HOM	Rpl10a
+RPL21	core_ribosomal	one2one	MGI HOM	Rpl21
+RPL17	core_ribosomal	one2many	MGI HOM	Rpl17;Gm6133
+RPL36A	core_ribosomal	many2many	MGI HOM	Rpl36a;Rpl36al;Rpl36a-ps1
+RPL18P3	core_ribosomal	none		
+RPL17P26	core_ribosomal	none		
+RPL31P5	core_ribosomal	none		
+RPL6P17	core_ribosomal	none		
+RPL15P13	core_ribosomal	none		
+RPL21P87	core_ribosomal	none		
+RPL5P20	core_ribosomal	none		
+RPL10P18	core_ribosomal	none		
+RPL7AP73	core_ribosomal	none		
+RPL23AP94	core_ribosomal	none		
+RPL12P49	core_ribosomal	none		
+RPL32P37	core_ribosomal	none		
+RPL17P45	core_ribosomal	none		
+RPL10AP13	core_ribosomal	none		
+RPL23AP78	core_ribosomal	none		
+RPL19P16	core_ribosomal	none		
+RPL39P29	core_ribosomal	none		
+RPL36AP5	core_ribosomal	none		
+RPL7P34	core_ribosomal	none		
+RPL28P6	core_ribosomal	none		
+RPL36AP36	core_ribosomal	none		
+RPL7AP7	core_ribosomal	none		
+RPL30P4	core_ribosomal	none		
+RPL31P3	core_ribosomal	none		
+RPL36AP24	core_ribosomal	none		
+RPL21P15	core_ribosomal	none		
+RPL9P5	core_ribosomal	none		
+RPL32P34	core_ribosomal	none		
+RPL37P2	core_ribosomal	none		
+RPL35AP16	core_ribosomal	none		
+RPL9P31	core_ribosomal	none		
+RPL27AP9	core_ribosomal	none		
+RPL35AP19	core_ribosomal	none		
+RPL39P36	core_ribosomal	none		
+RPL29P22	core_ribosomal	none		
+RPL36AP44	core_ribosomal	none		
+RPL12P28	core_ribosomal	none		
+RPL32P8	core_ribosomal	none		
+RPL29P18	core_ribosomal	none		
+RPL36AP40	core_ribosomal	none		
+RPL5P15	core_ribosomal	none		
+RPL7P15	core_ribosomal	none		
+RPL23AP1	core_ribosomal	none		
+RPL15P2	core_ribosomal	none		
+RPL21P79	core_ribosomal	none		
+RPL23AP64	core_ribosomal	none		
+RPL21P77	core_ribosomal	none		
+RPL29P24	core_ribosomal	none		
+RPL35AP11	core_ribosomal	none		
+RPL29P14	core_ribosomal	none		
+RPL12P31	core_ribosomal	none		
+RPL29P25	core_ribosomal	none		
+RPL36AP43	core_ribosomal	none		
+RPL7AP23	core_ribosomal	none		
+RPL37P6	core_ribosomal	none		
+RPL39P38	core_ribosomal	none		
+RPL36AP4	core_ribosomal	none		
+RPL29P26	core_ribosomal	none		
+RPL21P113	core_ribosomal	none		
+RPL15P8	core_ribosomal	none		
+RPL7P42	core_ribosomal	none		
+RPL7AP2	core_ribosomal	none		
+RPL38P1	core_ribosomal	none		
+RPL32P12	core_ribosomal	none		
+RPL39P34	core_ribosomal	none		
+RPL6P8	core_ribosomal	none		
+RPL12P30	core_ribosomal	none		
+RPL35AP13	core_ribosomal	none		
+RPL12P21	core_ribosomal	none		
+RPL23AP68	core_ribosomal	none		
+RPL29P32	core_ribosomal	none		
+RPL12P35	core_ribosomal	none		
+RPL32P2	core_ribosomal	none		
+RPL3P10	core_ribosomal	none		
+RPL30P14	core_ribosomal	none		
+RPL36AP19	core_ribosomal	none		
+RPL3P3	core_ribosomal	none		
+RPL15P12	core_ribosomal	none		
+RPL35AP32	core_ribosomal	none		
+RPL36AP50	core_ribosomal	none		
+RPL21P115	core_ribosomal	none		
+RPL37P23	core_ribosomal	none		
+RPL29P3	core_ribosomal	none		
+RPL29P13	core_ribosomal	none		
+RPL23AP44	core_ribosomal	none		
+RPL30P7	core_ribosomal	none		
+RPL38P3	core_ribosomal	none		
+RPL12P33	core_ribosomal	none		
+RPL35AP27	core_ribosomal	none		
+RPL31P40	core_ribosomal	none		
+RPS2	core_ribosomal	one2one	MGI HOM	Rps2
+RPS3	core_ribosomal	one2one	MGI HOM	Rps3
+RPS3A	core_ribosomal	one2one	MGI HOM	Rps3a1
+RPS4X	core_ribosomal	one2one	MGI HOM	Rps4x
+RPS5	core_ribosomal	one2one	MGI HOM	Rps5
+RPS6	core_ribosomal	one2one	MGI HOM	Rps6
+RPS7	core_ribosomal	one2one	MGI HOM	Rps7
+RPS8	core_ribosomal	one2one	MGI HOM	Rps8
+RPS9	core_ribosomal	one2one	MGI HOM	Rps9
+RPS10	core_ribosomal	one2one	MGI HOM	Rps10
+RPS11	core_ribosomal	one2one	MGI HOM	Rps11
+RPS12	core_ribosomal	one2one	MGI HOM	Rps12
+RPS13	core_ribosomal	one2one	MGI HOM	Rps13
+RPS14	core_ribosomal	one2one	MGI HOM	Rps14
+RPS15	core_ribosomal	one2one	MGI HOM	Rps15
+RPS15A	core_ribosomal	one2one	MGI HOM	Rps15a
+RPS16	core_ribosomal	one2one	MGI HOM	Rps16
+RPS17	core_ribosomal	one2one	MGI HOM	Rps17
+RPS18	core_ribosomal	one2many	MGI HOM	Rps18-ps6;Rps18-ps5;Rps18
+RPS19	core_ribosomal	one2one	MGI HOM	Rps19
+RPS20	core_ribosomal	one2one	MGI HOM	Rps20
+RPS21	core_ribosomal	one2one	MGI HOM	Rps21
+RPS23	core_ribosomal	one2one	MGI HOM	Rps23
+RPS24	core_ribosomal	one2one	MGI HOM	Rps24
+RPS25	core_ribosomal	one2one	MGI HOM	Rps25
+RPS26	core_ribosomal	many2one	MGI HOM	Rps26
+RPS27	core_ribosomal	one2many	MGI HOM	Rps27;Rps27rt
+RPS27A	core_ribosomal	one2one	MGI HOM	Rps27a
+RPS28	core_ribosomal	one2one	MGI HOM	Rps28
+RPS29	core_ribosomal	one2one	MGI HOM	Rps29
+RPSA	core_ribosomal	many2one	MGI HOM	Rpsa
+RPSA2	core_ribosomal	many2one	MGI HOM	Rpsa
+RPS5P2	core_ribosomal	none		
+RPS12P12	core_ribosomal	none		
+RPS3P5	core_ribosomal	none		
+RPS2P28	core_ribosomal	none		
+RPS8P3	core_ribosomal	none		
+RPS3AP52	core_ribosomal	none		
+RPSAP74	core_ribosomal	none		
+RPSAP71	core_ribosomal	none		
+RPS10P27	core_ribosomal	none		
+RPS24P1	core_ribosomal	none		
+RPS20P24	core_ribosomal	none		
+RPS26P41	core_ribosomal	none		
+RPS7P15	core_ribosomal	none		
+RPS27AP17	core_ribosomal	none		
+RPS15AP38	core_ribosomal	none		
+RPS26P55	core_ribosomal	none		
+RPS20P22	core_ribosomal	none		
+RPS4XP23	core_ribosomal	none		
+RPS29P2	core_ribosomal	none		
+RPS27P23	core_ribosomal	none		
+RPS14P8	core_ribosomal	none		
+RPS10P16	core_ribosomal	none		
+RPS27P20	core_ribosomal	none		
+RPS27P29	core_ribosomal	none		
+RPS26P34	core_ribosomal	none		
+RPS19P3	core_ribosomal	none		
+RPS27AP10	core_ribosomal	none		
+RPS23P4	core_ribosomal	none		
+RPSAP37	core_ribosomal	none		
+RPS20P4	core_ribosomal	none		
+RPS2P25	core_ribosomal	none		
+RPS27P2	core_ribosomal	none		
+RPS26P35	core_ribosomal	none		
+RPS29P1	core_ribosomal	none		
+RPS21P4	core_ribosomal	none		
+RPS24P16	core_ribosomal	none		
+RPS29P11	core_ribosomal	none		
+RPS16P9	core_ribosomal	none		
+RPS10P28	core_ribosomal	none		
+RPS17P14	core_ribosomal	none		
+RPS26P28	core_ribosomal	none		
+RPS29P12	core_ribosomal	none		
+RPS3AP50	core_ribosomal	none		
+RPS24P18	core_ribosomal	none		
+RPS12P21	core_ribosomal	none		
+RPS3AP17	core_ribosomal	none		
+RPS27AP13	core_ribosomal	none		
+RPS20P21	core_ribosomal	none		
+RPS27P13	core_ribosomal	none		
+RPS6P4	core_ribosomal	none		
+RPS27P14	core_ribosomal	none		
+RPS24P9	core_ribosomal	none		
+RPSAP28	core_ribosomal	none		
+RPS3P1	core_ribosomal	none		
+RPS17P2	core_ribosomal	none		
+RPSAP54	core_ribosomal	none		
+RPS11P7	core_ribosomal	none		
+RPS18P8	core_ribosomal	none		
+RPSAP43	core_ribosomal	none		
+RPS3AP36	core_ribosomal	none		
+RPSAP61	core_ribosomal	none		
+RPS3P6	core_ribosomal	none		
+RPS2P20	core_ribosomal	none		
+RPS7P14	core_ribosomal	none		
+RPS8P4	core_ribosomal	none		
+RPS4XP8	core_ribosomal	none		
+RPS2P29	core_ribosomal	none		
+RPS10P13	core_ribosomal	none		
+RPS15AP19	core_ribosomal	none		
+RPS12P25	core_ribosomal	none		
+RPSAP65	core_ribosomal	none		
+RPS15AP1	core_ribosomal	none		
+RPS2P2	core_ribosomal	none		
+RPS12P23	core_ribosomal	none		
+RPS26P11	core_ribosomal	many2one	MGI HOM	Rps26
+RPS24P19	core_ribosomal	none		
+RPS28P7	core_ribosomal	none		
+RPS26P39	core_ribosomal	none		
+RPS29P17	core_ribosomal	none		
+RPSAP56	core_ribosomal	none		
+RPS7P5	core_ribosomal	none		
+RPS26P20	core_ribosomal	none		
+RPSAP50	core_ribosomal	none		
+RPS27AP20	core_ribosomal	none		
+RPSAP70	core_ribosomal	none		
+RPS4XP21	core_ribosomal	none		
+RPS4XP3	core_ribosomal	none		
+RPS18P1	core_ribosomal	none		
+RPS27AP3	core_ribosomal	none		
+RPS2P1	core_ribosomal	none		
+RPS10P2	core_ribosomal	none		
+RPS3AP47	core_ribosomal	none		
+RPS10P3	core_ribosomal	none		
+RPSAP1	core_ribosomal	none		
+RPS26P40	core_ribosomal	none		
+RPS25P9	core_ribosomal	none		
+MT-CO3	core_mitochondrial	one2one	MGI HOM	mt-Co3
+MT-RNR1	core_mitochondrial	one2one	MGI HOM	mt-Rnr1
+MT-TA	core_mitochondrial	one2one	MGI HOM	mt-Ta
+MT-TD	core_mitochondrial	one2one	MGI HOM	mt-Td
+MT-TE	core_mitochondrial	one2one	MGI HOM	mt-Te
+MT-TF	core_mitochondrial	one2one	MGI HOM	mt-Tf
+MT-TG	core_mitochondrial	one2one	MGI HOM	mt-Tg
+MT-TH	core_mitochondrial	one2one	MGI HOM	mt-Th
+MT-TI	core_mitochondrial	one2one	MGI HOM	mt-Ti
+MT-TK	core_mitochondrial	one2one	MGI HOM	mt-Tk
+MT-TL1	core_mitochondrial	one2one	MGI HOM	mt-Tl1
+MT-TL2	core_mitochondrial	one2one	MGI HOM	mt-Tl2
+MT-TM	core_mitochondrial	one2one	MGI HOM	mt-Tm
+MT-TN	core_mitochondrial	one2one	MGI HOM	mt-Tn
+MT-TP	core_mitochondrial	one2one	MGI HOM	mt-Tp
+MT-TR	core_mitochondrial	one2one	MGI HOM	mt-Tr
+MT-TS2	core_mitochondrial	one2one	MGI HOM	mt-Ts2
+MT-TT	core_mitochondrial	one2one	MGI HOM	mt-Tt
+MT-TV	core_mitochondrial	one2one	MGI HOM	mt-Tv
+MT-TW	core_mitochondrial	one2one	MGI HOM	mt-Tw
+MT-TY	core_mitochondrial	one2one	MGI HOM	mt-Ty
+MT-ND5	core_mitochondrial	one2one	MGI HOM	mt-Nd5
+MT-ND6	core_mitochondrial	one2one	MGI HOM	mt-Nd6
+MT-ATP6	core_mitochondrial	one2one	MGI HOM	mt-Atp6
+MT-CO1	core_mitochondrial	one2one	MGI HOM	mt-Co1
+MT-CO2	core_mitochondrial	one2one	MGI HOM	mt-Co2
+MT-CYB	core_mitochondrial	one2one	MGI HOM	mt-Cytb
+MT-ND1	core_mitochondrial	one2one	MGI HOM	mt-Nd1
+MT-ND2	core_mitochondrial	one2one	MGI HOM	mt-Nd2
+MT-ND3	core_mitochondrial	one2one	MGI HOM	mt-Nd3
+MT-ND4	core_mitochondrial	one2one	MGI HOM	mt-Nd4
+MT-ATP8	core_mitochondrial	one2one	MGI HOM	mt-Atp8
+MT-TC	core_mitochondrial	one2one	MGI HOM	mt-Tc
+MT-ND4L	core_mitochondrial	one2one	MGI HOM	mt-Nd4l
+MT-RNR2	core_mitochondrial	one2one	MGI HOM	mt-Rnr2
+MT-TQ	core_mitochondrial	one2one	MGI HOM	mt-Tq
+MTRNR2L1	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L2	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L3	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L4	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L5	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L6	core_mitochondrial	none		
+MTRNR2L7	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L8	core_mitochondrial	none		
+MTRNR2L9	core_mitochondrial	none		
+MTRNR2L10	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L11	core_mitochondrial	many2one	MGI HOM	Mtrnr2l7
+MTRNR2L12	core_mitochondrial	none		
+MT-TS1	core_mitochondrial	one2one	MGI HOM	mt-Ts1
+XIST	core_sex	one2one	MGI HOM	Xist
+TSIX	core_sex	one2one	MGI HOM	Tsix
+UTY	core_sex	one2one	MGI HOM	Uty
+DDX3Y	core_sex	one2one	MGI HOM	Ddx3y
+RPS4Y1	core_sex	none		
+KDM5D	core_sex	one2one	MGI HOM	Kdm5d
+EIF1AY	core_sex	none		
+USP9Y	core_sex	one2one	MGI HOM	Usp9y
+MCM5	cell_cycle	one2one	MGI HOM	Mcm5
+PCNA	cell_cycle	one2one	MGI HOM	Pcna
+TYMS	cell_cycle	one2one	MGI HOM	Tyms
+FEN1	cell_cycle	one2one	MGI HOM	Fen1
+MCM2	cell_cycle	one2one	MGI HOM	Mcm2
+MCM4	cell_cycle	one2one	MGI HOM	Mcm4
+RRM1	cell_cycle	one2one	MGI HOM	Rrm1
+UNG	cell_cycle	one2one	MGI HOM	Ung
+GINS2	cell_cycle	one2one	MGI HOM	Gins2
+MCM6	cell_cycle	one2one	MGI HOM	Mcm6
+CDCA7	cell_cycle	one2one	MGI HOM	Cdca7
+DTL	cell_cycle	one2one	MGI HOM	Dtl
+PRIM1	cell_cycle	one2one	MGI HOM	Prim1
+UHRF1	cell_cycle	one2one	MGI HOM	Uhrf1
+HELLS	cell_cycle	one2one	MGI HOM	Hells
+RFC2	cell_cycle	one2one	MGI HOM	Rfc2
+RPA2	cell_cycle	one2one	MGI HOM	Rpa2
+NASP	cell_cycle	one2one	MGI HOM	Nasp
+RAD51AP1	cell_cycle	one2one	MGI HOM	Rad51ap1
+GMNN	cell_cycle	one2one	MGI HOM	Gmnn
+WDR76	cell_cycle	one2one	MGI HOM	Wdr76
+SLBP	cell_cycle	one2one	MGI HOM	Slbp
+CCNE2	cell_cycle	one2one	MGI HOM	Ccne2
+UBR7	cell_cycle	one2one	MGI HOM	Ubr7
+POLD3	cell_cycle	one2one	MGI HOM	Pold3
+MSH2	cell_cycle	one2one	MGI HOM	Msh2
+ATAD2	cell_cycle	one2one	MGI HOM	Atad2
+RAD51	cell_cycle	one2one	MGI HOM	Rad51
+RRM2	cell_cycle	one2one	MGI HOM	Rrm2
+CDC45	cell_cycle	one2one	MGI HOM	Cdc45
+CDC6	cell_cycle	one2one	MGI HOM	Cdc6
+EXO1	cell_cycle	one2one	MGI HOM	Exo1
+TIPIN	cell_cycle	one2one	MGI HOM	Tipin
+DSCC1	cell_cycle	one2one	MGI HOM	Dscc1
+BLM	cell_cycle	one2one	MGI HOM	Blm
+CASP8AP2	cell_cycle	one2one	MGI HOM	Casp8ap2
+USP1	cell_cycle	one2one	MGI HOM	Usp1
+CLSPN	cell_cycle	one2one	MGI HOM	Clspn
+POLA1	cell_cycle	one2one	MGI HOM	Pola1
+CHAF1B	cell_cycle	one2one	MGI HOM	Chaf1b
+BRIP1	cell_cycle	one2one	MGI HOM	Brip1
+E2F8	cell_cycle	one2one	MGI HOM	E2f8
+HMGB2	cell_cycle	one2one	MGI HOM	Hmgb2
+CDK1	cell_cycle	one2one	MGI HOM	Cdk1
+NUSAP1	cell_cycle	one2one	MGI HOM	Nusap1
+UBE2C	cell_cycle	one2one	MGI HOM	Ube2c
+BIRC5	cell_cycle	one2one	MGI HOM	Birc5
+TPX2	cell_cycle	one2one	MGI HOM	Tpx2
+TOP2A	cell_cycle	one2one	MGI HOM	Top2a
+NDC80	cell_cycle	one2one	MGI HOM	Ndc80
+CKS2	cell_cycle	one2one	MGI HOM	Cks2
+NUF2	cell_cycle	one2one	MGI HOM	Nuf2
+CKS1B	cell_cycle	one2one	MGI HOM	Cks1b
+MKI67	cell_cycle	one2one	MGI HOM	Mki67
+TMPO	cell_cycle	one2one	MGI HOM	Tmpo
+CENPF	cell_cycle	one2one	MGI HOM	Cenpf
+TACC3	cell_cycle	one2one	MGI HOM	Tacc3
+SMC4	cell_cycle	one2one	MGI HOM	Smc4
+CCNB2	cell_cycle	one2one	MGI HOM	Ccnb2
+CKAP2L	cell_cycle	one2one	MGI HOM	Ckap2l
+CKAP2	cell_cycle	one2one	MGI HOM	Ckap2
+AURKB	cell_cycle	one2one	MGI HOM	Aurkb
+BUB1	cell_cycle	one2one	MGI HOM	Bub1
+KIF11	cell_cycle	one2one	MGI HOM	Kif11
+ANP32E	cell_cycle	one2one	MGI HOM	Anp32e
+TUBB4B	cell_cycle	one2one	MGI HOM	Tubb4b
+GTSE1	cell_cycle	one2one	MGI HOM	Gtse1
+KIF20B	cell_cycle	one2one	MGI HOM	Kif20b
+HJURP	cell_cycle	one2one	MGI HOM	Hjurp
+CDCA3	cell_cycle	one2one	MGI HOM	Cdca3
+CDC20	cell_cycle	one2one	MGI HOM	Cdc20
+TTK	cell_cycle	one2one	MGI HOM	Ttk
+CDC25C	cell_cycle	one2one	MGI HOM	Cdc25c
+KIF2C	cell_cycle	one2one	MGI HOM	Kif2c
+RANGAP1	cell_cycle	one2one	MGI HOM	Rangap1
+NCAPD2	cell_cycle	one2one	MGI HOM	Ncapd2
+DLGAP5	cell_cycle	one2one	MGI HOM	Dlgap5
+CDCA2	cell_cycle	one2one	MGI HOM	Cdca2
+CDCA8	cell_cycle	one2one	MGI HOM	Cdca8
+ECT2	cell_cycle	one2one	MGI HOM	Ect2
+KIF23	cell_cycle	one2one	MGI HOM	Kif23
+HMMR	cell_cycle	one2one	MGI HOM	Hmmr
+AURKA	cell_cycle	one2one	MGI HOM	Aurka
+PSRC1	cell_cycle	one2one	MGI HOM	Psrc1
+ANLN	cell_cycle	one2one	MGI HOM	Anln
+LBR	cell_cycle	one2one	MGI HOM	Lbr
+CKAP5	cell_cycle	one2one	MGI HOM	Ckap5
+CENPE	cell_cycle	one2one	MGI HOM	Cenpe
+CTCF	cell_cycle	one2one	MGI HOM	Ctcf
+NEK2	cell_cycle	one2one	MGI HOM	Nek2
+G2E3	cell_cycle	one2one	MGI HOM	G2e3
+GAS2L3	cell_cycle	one2one	MGI HOM	Gas2l3
+CBX5	cell_cycle	one2one	MGI HOM	Cbx5
+CENPA	cell_cycle	one2one	MGI HOM	Cenpa
+CENPU	cell_cycle	one2one	MGI HOM	Cenpu
+PIMREG	cell_cycle	one2one	MGI HOM	Pimreg
+JPT1	cell_cycle	one2one	MGI HOM	Jpt1
+EGR2	stress_extended	one2one	MGI HOM	Egr2
+EGR3	stress_extended	one2one	MGI HOM	Egr3
+DUSP2	stress_extended	one2one	MGI HOM	Dusp2
+IER5	stress_extended	one2one	MGI HOM	Ier5
+BTG1	stress_extended	one2one	MGI HOM	Btg1
+BTG2	stress_extended	one2one	MGI HOM	Btg2
+ZFP36L1	stress_extended	one2one	MGI HOM	Zfp36l1
+ZFP36L2	stress_extended	one2one	MGI HOM	Zfp36l2
+NFKBIA	stress_extended	one2one	MGI HOM	Nfkbia
+NR4A1	stress_extended	one2one	MGI HOM	Nr4a1
+SOCS3	stress_extended	one2one	MGI HOM	Socs3
+RHOB	stress_extended	one2one	MGI HOM	Rhob
+DNAJA4	stress_extended	one2one	MGI HOM	Dnaja4
+DNAJB4	stress_extended	one2one	MGI HOM	Dnajb4

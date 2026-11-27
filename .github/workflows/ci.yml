@@ -1,0 +1,110 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  PYTHONHASHSEED: "0"
+
+jobs:
+  tests:
+    name: tests (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ".[report]" pytest
+      - name: Test
+        # includes the documentation checks: no internal names (tests/test_terms.py), every public function and
+        # option documented and the command-line reference current (tests/test_docs.py)
+        run: python -m pytest -q tests
+
+  notebooks:
+    name: notebooks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ".[tutorials]" pytest nbmake
+      - name: Example data of a private repository
+        # a private repository's release assets need a login: the workflow's own token fetches those of the newest
+        # v0.6.3 release or pre-release (gh), and fetch_example_data checks their SHA-256 (it then downloads nothing)
+        if: github.event.repository.private
+        id: private
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh release list -R "$GITHUB_REPOSITORY" --limit 50 --json tagName -q '.[].tagName' | grep '^v0\.6\.3' | head -1 || true)
+          if [ -z "$tag" ]; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=notebooks pending::No v0.6.3 release in this private repository yet; the notebooks were not run."
+            exit 0
+          fi
+          gh release download "$tag" -R "$GITHUB_REPOSITORY" -p '*.h5ad' -D notebooks/data --clobber
+          python -c "import sys; sys.path.insert(0, 'notebooks'); import fetch_example_data as f; f.fetch(dest='notebooks/data')"
+          echo "example data: release $tag" >> "$GITHUB_STEP_SUMMARY"
+          echo "published=true" >> "$GITHUB_OUTPUT"
+      - name: Are the example data published?
+        # the example data are the v0.6.3 release assets: until they are published (HTTP 404) the notebooks are
+        # pending, not failing; any other answer than 200 or 404 fails the job
+        if: ${{ !github.event.repository.private }}
+        id: assets
+        run: |
+          url=$(python -c "import sys; sys.path.insert(0, 'notebooks'); import fetch_example_data as f; print(f.BASE_URL + next(iter(f.FILES)))")
+          code=$(curl -s -o /dev/null -I -L -w '%{http_code}' "$url")
+          echo "$url: HTTP $code"
+          if [ "$code" = "200" ]; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+          elif [ "$code" = "404" ]; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "::notice title=notebooks pending::The example data (v0.6.3 release assets) are not published yet; the notebooks were not run."
+            echo "Notebooks: pending until the v0.6.3 release assets are published (not run)." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::error::unexpected HTTP $code for $url"
+            exit 1
+          fi
+      - name: Cache example data
+        if: steps.assets.outputs.published == 'true'
+        uses: actions/cache@v4
+        with:
+          path: notebooks/data
+          key: example-data-${{ hashFiles('scarlet/datasets.py') }}
+      - name: Execute the notebooks
+        if: steps.assets.outputs.published == 'true' || steps.private.outputs.published == 'true'
+        # each notebook runs in its own folder; the example data come from the v0.6.3 release assets (no login)
+        run: python -m pytest -q --nbmake --nbmake-timeout=1800 notebooks/
+
+  docs:
+    name: documentation site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ".[docs]"
+      - name: Build (warnings are errors)
+        run: mkdocs build --strict

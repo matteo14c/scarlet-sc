@@ -1,0 +1,111 @@
+dataset	label_set	n_classes	kind	cell_cycle	matched_classes	stress_core	ribosomal	mitochondrial	sex	stress_extended
+labelset_001	labels	5	labels	ON		ON	ON	ON	ON	OFF
+labelset_002	labels	5	labels	ON		ON	ON	ON	ON	OFF
+labelset_003	labels	10	labels	ON		ON	ON	ON	ON	OFF
+labelset_004	labels	14	labels	ON		ON	ON	ON	ON	OFF
+labelset_005	labels	9	labels	ON		ON	ON	ON	ON	OFF
+labelset_006	labels	13	labels	ON		ON	ON	ON	ON	OFF
+labelset_007	labels	4	labels	ON		ON	ON	ON	ON	OFF
+labelset_008	labels	9	labels	ON		ON	ON	ON	ON	OFF
+labelset_009	labels	6	labels	ON		ON	ON	ON	ON	OFF
+labelset_010	labels	11	labels	ON		ON	ON	ON	ON	OFF
+labelset_011	labels	10	labels	ON		ON	ON	ON	ON	OFF
+labelset_012	labels	4	labels	ON		ON	ON	ON	ON	OFF
+labelset_013	labels	55	labels	OFF	hematopoietic precursor cell; granulocytopoietic cell; late pro-B cell; proerythroblast; promonocyte; erythroblast; early pro-B cell; DN1 thymic pro-T cell	ON	ON	ON	ON	OFF
+labelset_014	labels	13	labels	ON		ON	ON	ON	ON	OFF
+labelset_015	labels	5	labels	ON		ON	ON	ON	ON	OFF
+labelset_016	labels	4	labels	ON		ON	ON	ON	ON	OFF
+labelset_017	labels	9	labels	ON		ON	ON	ON	ON	OFF
+labelset_018	labels	34	labels	ON		ON	ON	ON	ON	OFF
+labelset_019	labels	3	labels	ON		ON	ON	ON	ON	OFF
+labelset_020	labels	3	labels	ON		ON	ON	ON	ON	OFF
+labelset_021	labels	95	labels	ON		ON	ON	ON	ON	OFF
+labelset_022	labels	7	labels	ON		ON	ON	ON	ON	OFF
+labelset_023	labels	5	labels	ON		ON	ON	ON	ON	OFF
+labelset_024	labels	10	labels	ON		ON	ON	ON	ON	OFF
+labelset_025	labels	5	labels	ON		ON	ON	ON	ON	OFF
+labelset_026	labels	45	labels	OFF	Cycling T&NK; Plasmablasts; Progenitor; Cycling; GC_B (I); GC_B (II); Pre-B; Pro-B	ON	ON	ON	ON	OFF
+labelset_027	labels	10	labels	OFF	Progenitor	ON	ON	ON	ON	OFF
+labelset_028	labels	18	labels	ON		ON	ON	ON	ON	OFF
+labelset_029	labels	28	labels	ON		ON	ON	ON	ON	OFF
+labelset_030	labels	6	labels	ON		ON	ON	ON	ON	OFF
+labelset_031	labels	8	labels	ON		ON	ON	ON	ON	OFF
+labelset_032	labels	10	labels	OFF	neutrophil_progenitors	ON	ON	ON	ON	OFF
+labelset_033	labels	21	labels	OFF	neutrophil_progenitors_c-10; neutrophil_progenitors_c-17	ON	ON	ON	ON	OFF
+labelset_034	labels	20	labels	OFF	monocyte_progenitors; neutrophil_progenitors; hematopoietic_stem_cells; erythrocyte_progenitors; megakaryocyte-erythroid_progenitors; megakaryocyte_progenitors; multipotent_progenitors	ON	ON	ON	ON	OFF
+labelset_035	labels	46	labels	OFF	monocyte_progenitors_c-11; monocyte_progenitors_c-16; hematopoietic_stem_cells_c-21; neutrophil_progenitors_c-23; neutrophil_progenitors_c-25; monocyte_progenitors_c-26; neutrophil_progenitors_c-27; monocyte_progenitors_c-28; neutrophil_progenitors_c-29; erythrocyte_progenitors_c-32; megakaryocyte-erythroid_progenitors_c-31; megakaryocyte_progenitors_c-33; neutrophil_progenitors_c-34; megakaryocyte-erythroid_progenitors_c-35; megakaryocyte_progenitors_c-37; erythrocyte_progenitors_c-39; erythrocyte_progenitors_c-41; multipotent_progenitors_c-42	ON	ON	ON	ON	OFF
+labelset_036	labels	16	labels	ON		ON	ON	ON	ON	OFF
+labelset_037	labels	32	labels	ON		ON	ON	ON	ON	OFF
+labelset_038	labels	18	labels	OFF	cycling_immune_cells	ON	ON	ON	ON	OFF
+labelset_039	labels	33	labels	OFF	cycling_immune_cells_c-32	ON	ON	ON	ON	OFF
+labelset_040	labels	11	labels	OFF	enteric_stem_cells	ON	ON	ON	ON	OFF
+labelset_041	labels	25	labels	OFF	enteric_stem_cells_c-2	ON	ON	ON	ON	OFF
+labelset_042	labels	15	labels	ON		ON	ON	ON	ON	OFF
+labelset_043	labels	48	labels	ON		ON	ON	ON	ON	OFF
+labelset_044	labels	15	labels	OFF	late_primary_spermatocytes	ON	ON	ON	ON	OFF
+labelset_045	labels	26	labels	OFF	late_primary_spermatocytes_c-25	ON	ON	ON	ON	OFF
+labelset_046	labels	13	labels	ON		ON	ON	ON	ON	OFF
+labelset_047	labels	20	labels	ON		ON	ON	ON	ON	OFF
+labelset_048	labels	27	labels	ON		ON	ON	ON	ON	OFF
+labelset_049	labels	53	labels	ON		ON	ON	ON	ON	OFF
+labelset_050	labels	16	labels	ON		ON	ON	ON	ON	OFF
+labelset_051	labels	23	labels	ON		ON	ON	ON	ON	OFF
+labelset_052	labels	10	labels	ON		ON	ON	ON	ON	OFF
+labelset_053	labels	18	labels	ON		ON	ON	ON	ON	OFF
+labelset_054	labels	28	labels	ON		ON	ON	ON	ON	OFF
+labelset_055	labels	49	labels	ON		ON	ON	ON	ON	OFF
+labelset_056	labels	11	labels	ON		ON	ON	ON	ON	OFF
+labelset_057	labels	24	labels	ON		ON	ON	ON	ON	OFF
+labelset_058	labels	27	labels	ON		ON	ON	ON	ON	OFF
+labelset_059	labels	49	labels	ON		ON	ON	ON	ON	OFF
+labelset_060	labels	14	labels	ON		ON	ON	ON	ON	OFF
+labelset_061	labels	33	labels	ON		ON	ON	ON	ON	OFF
+labelset_062	labels	10	labels	ON		ON	ON	ON	ON	OFF
+labelset_063	labels	25	labels	ON		ON	ON	ON	ON	OFF
+labelset_064	labels	12	labels	ON		ON	ON	ON	ON	OFF
+labelset_065	labels	25	labels	ON		ON	ON	ON	ON	OFF
+labelset_066	labels	14	labels	ON		ON	ON	ON	ON	OFF
+labelset_067	labels	25	labels	ON		ON	ON	ON	ON	OFF
+labelset_068	labels	17	labels	OFF	fetal_progenitors	ON	ON	ON	ON	OFF
+labelset_069	labels	30	labels	OFF	fetal_progenitors_c-20; fetal_progenitors_c-25	ON	ON	ON	ON	OFF
+labelset_070	labels	18	labels	OFF	cycling_epithelial_cells	ON	ON	ON	ON	OFF
+labelset_071	labels	33	labels	OFF	cycling_epithelial_cells_c-31	ON	ON	ON	ON	OFF
+labelset_072	labels	8	labels	OFF	enteric_stem_cells	ON	ON	ON	ON	OFF
+labelset_073	labels	18	labels	OFF	enteric_stem_cells_c-3	ON	ON	ON	ON	OFF
+labelset_074	labels	10	labels	ON		ON	ON	ON	ON	OFF
+labelset_075	labels	33	labels	ON		ON	ON	ON	ON	OFF
+labelset_076	labels	23	labels	OFF	cycling_immune_cells; cycling_salivary_epithelial_cells	ON	ON	ON	ON	OFF
+labelset_077	labels	44	labels	OFF	cycling_immune_cells_c-37; cycling_salivary_epithelial_cells_c-41	ON	ON	ON	ON	OFF
+labelset_078	labels	11	labels	ON		ON	ON	ON	ON	OFF
+labelset_079	labels	28	labels	ON		ON	ON	ON	ON	OFF
+labelset_080	labels	16	labels	ON		ON	ON	ON	ON	OFF
+labelset_081	labels	26	labels	ON		ON	ON	ON	ON	OFF
+labelset_082	labels	7	labels	OFF	enteric_stem_cells	ON	ON	ON	ON	OFF
+labelset_083	labels	18	labels	OFF	enteric_stem_cells_c-10	ON	ON	ON	ON	OFF
+labelset_084	labels	13	labels	OFF	neutrophil_progenitors	ON	ON	ON	ON	OFF
+labelset_085	labels	22	labels	OFF	neutrophil_progenitors_c-16	ON	ON	ON	ON	OFF
+labelset_086	labels	24	labels	OFF	intestinal_stem_cells	ON	ON	ON	ON	OFF
+labelset_087	labels	50	labels	OFF	intestinal_stem_cells_c-28	ON	ON	ON	ON	OFF
+labelset_088	labels	18	labels	OFF	late_primary_spermatocytes; early_primary_spermatocytes; undifferentiated_spermatogonia; differentiating_spermatogonia	ON	ON	ON	ON	OFF
+labelset_089	labels	38	labels	OFF	differentiating_spermatogonia_c-7; late_primary_spermatocytes_c-8; early_primary_spermatocytes_c-9; late_primary_spermatocytes_c-10; early_primary_spermatocytes_c-14; early_primary_spermatocytes_c-15; late_primary_spermatocytes_c-16; undifferentiated_spermatogonia_c-17; undifferentiated_spermatogonia_c-26; late_primary_spermatocytes_c-27	ON	ON	ON	ON	OFF
+labelset_090	labels	19	labels	OFF	neutrophil_progenitors	ON	ON	ON	ON	OFF
+labelset_091	labels	31	labels	OFF	neutrophil_progenitors_c-17	ON	ON	ON	ON	OFF
+labelset_092	labels	17	labels	ON		ON	ON	ON	ON	OFF
+labelset_093	labels	32	labels	ON		ON	ON	ON	ON	OFF
+labelset_094	labels	17	labels	ON		ON	ON	ON	ON	OFF
+labelset_095	labels	39	labels	ON		ON	ON	ON	ON	OFF
+labelset_096	labels	13	labels	ON		ON	ON	ON	ON	OFF
+labelset_097	labels	27	labels	ON		ON	ON	ON	ON	OFF
+labelset_098	labels	8	labels	OFF	Cycling; Cycling T&NK; GC_B (I); GC_B (II); Plasmablasts; Progenitor; Pre-B; Pro-B	ON	ON	ON	ON	OFF
+labelset_099	labels	1	labels	ON		ON	ON	ON	ON	OFF
+labelset_100	labels	1	labels	ON		ON	ON	ON	ON	OFF
+labelset_101	labels	5	labels	ON		ON	ON	ON	ON	OFF
+labelset_102	labels	9	labels	ON		ON	ON	ON	ON	OFF
+labelset_103	labels	14	labels	ON		ON	ON	ON	ON	OFF
+labelset_104	labels	15	labels	OFF	late_primary_spermatocytes	ON	ON	ON	ON	OFF
+labelset_105	labels	11	labels	ON		ON	ON	ON	ON	OFF
+labelset_106	labels	10	labels	ON		ON	ON	ON	ON	OFF
+labelset_107	labels	13	labels	OFF	neutrophil_progenitors	ON	ON	ON	ON	OFF
+labelset_108	labels	16	labels	ON		ON	ON	ON	ON	OFF
+labelset_109	labels	12	labels	ON		ON	ON	ON	ON	OFF
+labelset_110	labels	17	labels	ON		ON	ON	ON	ON	OFF

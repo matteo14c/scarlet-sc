@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scarlet-sc"
+version = "0.6.3"
+description = "SCARLET: cell-type annotation for single-cell RNA-seq data"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "BSD-3-Clause"}
+dependencies = [
+    # the floors are the oldest versions the tests ran with (a job at older floors: 0.6.4)
+    "anndata>=0.12.14",
+    "scanpy>=1.11.5",
+    "numpy>=2.4.4",
+    "pandas>=2.3.3",
+    "scipy>=1.17.1",
+    "scikit-learn>=1.8.0",
+    "tqdm",
+    "numba",
+    "statsmodels",
+    "networkx",
+    "h5py",
+    # the report's UMAP (scanpy pulls in umap-learn and pynndescent): with Python 3.12 or later, scanpy 1.12.6 or later,
+    # which works with umap-learn 0.6 and pynndescent 0.7; with Python 3.11 (scanpy up to 1.11), umap-learn below 0.6
+    # and pynndescent below 0.7, which scanpy 1.11 works with
+    "scanpy>=1.12.6; python_version >= '3.12'",
+    "umap-learn<0.6; python_version < '3.12'",
+    "pynndescent<0.7; python_version < '3.12'",
+]
+
+[project.optional-dependencies]
+# the HTML reports: plotly pinned; scanpy and matplotlib come with the core install
+report = ["plotly==7.1.0"]
+# the tutorial notebooks: the reports, Jupyter, and ipywidgets for the progress bars (the data come with
+# scarlet.datasets.fetch)
+tutorials = ["plotly==7.1.0", "jupyterlab", "ipykernel", "ipywidgets"]
+# only to build the documentation site locally (contributors: mkdocs serve); the versions its build is checked with
+docs = ["mkdocs==1.6.1", "mkdocs-material==9.8.1", "mkdocstrings==1.0.8", "mkdocstrings-python==2.0.10"]
+
+[project.urls]
+Homepage = "https://github.com/matteo14c/scarlet-sc"
+Issues = "https://github.com/matteo14c/scarlet-sc/issues"
+# the Markdown documentation; the site replaces this link when it goes online with the public release
+Documentation = "https://github.com/matteo14c/scarlet-sc/tree/main/docs"
+
+[project.scripts]
+scarlet = "scarlet.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scarlet*"]
+
+[tool.setuptools.package-data]
+scarlet = ["*.tsv"]
